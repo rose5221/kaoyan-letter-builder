@@ -1,0 +1,2756 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<title>考研英语小作文 · 书信通知纪要组装台</title>
+<style>
+:root {
+  --ink: #17342f;
+  --ink-2: #2a4a44;
+  --muted: #6e7f7a;
+  --paper: #fbf8ef;
+  --paper-2: #f4efe1;
+  --canvas: #eee8da;
+  --line: #d8d0bd;
+  --line-soft: rgba(23, 52, 47, .12);
+  --green: #175b4d;
+  --green-2: #2f7c68;
+  --mint: #dceadf;
+  --coral: #d4674b;
+  --coral-soft: #f5ded5;
+  --gold: #b78a3c;
+  --gold-soft: #f2e6c9;
+  --white: #fffdf7;
+  --shadow: 0 24px 70px rgba(36, 45, 37, .12);
+  --shadow-sm: 0 8px 24px rgba(36, 45, 37, .08);
+  --serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", "Songti SC", "STSong", serif;
+  --sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --mono: "SFMono-Regular", "Menlo", "Consolas", monospace;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 14% 2%, rgba(255,255,255,.9), transparent 32%),
+    radial-gradient(circle at 100% 18%, rgba(212,103,75,.07), transparent 26%),
+    linear-gradient(180deg, #f1ecdf 0%, #f7f3e9 38%, #eee8da 100%);
+  font-family: var(--sans);
+  min-height: 100vh;
+}
+button, input, select { font: inherit; color: inherit; }
+button { cursor: pointer; }
+button:focus-visible, input:focus-visible, select:focus-visible { outline: 3px solid rgba(212,103,75,.28); outline-offset: 2px; }
+::selection { background: var(--coral-soft); color: var(--ink); }
+
+.topbar {
+  position: sticky; top: 0; z-index: 40;
+  display: flex; align-items: center; gap: 18px;
+  height: 68px; padding: 0 34px;
+  background: rgba(250,247,239,.9);
+  border-bottom: 1px solid var(--line-soft);
+  backdrop-filter: blur(18px);
+}
+.brand { display: flex; align-items: center; gap: 11px; min-width: 210px; }
+.brand-mark {
+  width: 37px; height: 37px; border-radius: 12px 12px 12px 4px;
+  display: grid; place-items: center; background: var(--green); color: #fff8e9;
+  font-family: var(--serif); font-size: 18px; font-weight: 700; letter-spacing: -.06em;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.18), 0 7px 16px rgba(23,91,77,.2);
+}
+.brand-copy strong { display: block; font-size: 14px; letter-spacing: .01em; }
+.brand-copy span { display: block; color: var(--muted); font-size: 10px; letter-spacing: .17em; margin-top: 2px; }
+.topbar-spacer { flex: 1; }
+.offline-pill { display: inline-flex; align-items: center; gap: 7px; color: var(--green); font-size: 11px; font-weight: 650; letter-spacing: .03em; }
+.offline-pill i { width: 7px; height: 7px; border-radius: 50%; background: #3a9b72; box-shadow: 0 0 0 4px rgba(58,155,114,.12); }
+.top-btn {
+  border: 1px solid var(--line); background: rgba(255,253,247,.66); border-radius: 999px;
+  padding: 8px 15px; font-size: 12px; font-weight: 650; color: var(--ink-2);
+  transition: .2s ease;
+}
+.top-btn:hover { border-color: var(--green); background: var(--white); transform: translateY(-1px); }
+.top-btn.primary { color: #fff; background: var(--green); border-color: var(--green); }
+.top-btn.primary:hover { background: #0f4d41; }
+
+.app-frame { max-width: 1540px; margin: 0 auto; padding: 34px 28px 48px; }
+.masthead {
+  position: relative; overflow: hidden;
+  padding: 38px 40px 34px; margin-bottom: 20px;
+  border-radius: 26px;
+  color: #f9f5e9;
+  background:
+    radial-gradient(circle at 87% 10%, rgba(221,173,92,.18), transparent 26%),
+    radial-gradient(circle at 70% 100%, rgba(212,103,75,.22), transparent 31%),
+    linear-gradient(125deg, #123d35 0%, #1c5147 47%, #173b35 100%);
+  box-shadow: 0 28px 70px rgba(23,52,47,.18);
+}
+.masthead::before {
+  content: ""; position: absolute; right: 42px; top: -60px; width: 250px; height: 250px; border: 1px solid rgba(255,248,233,.16); border-radius: 50%;
+}
+.masthead::after {
+  content: ""; position: absolute; right: 112px; top: 12px; width: 110px; height: 110px; border: 1px solid rgba(255,248,233,.12); border-radius: 50%;
+}
+.masthead-inner { position: relative; z-index: 1; max-width: 990px; }
+.masthead .eyebrow { color: #d9bd82; }
+.masthead h1 {
+  margin: 10px 0 12px; font-family: var(--serif); font-size: clamp(34px, 4.2vw, 60px);
+  line-height: 1.05; letter-spacing: -.045em; font-weight: 600;
+}
+.masthead h1 em { color: #ebc88b; font-style: normal; }
+.masthead p { max-width: 760px; margin: 0; color: rgba(247,243,231,.74); font-size: 14px; line-height: 1.85; }
+.masthead-stats { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+.masthead-stats span {
+  padding: 8px 12px; border: 1px solid rgba(255,255,255,.14); background: rgba(255,255,255,.07);
+  border-radius: 999px; font-size: 11px; color: rgba(255,255,255,.79); letter-spacing: .02em;
+}
+.masthead-stats strong { color: #fff; font-size: 13px; }
+
+.type-tabs {
+  display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 8px; margin-bottom: 20px;
+  padding: 7px; border-radius: 18px; border: 1px solid var(--line); background: rgba(255,253,247,.62); box-shadow: var(--shadow-sm);
+}
+.type-tab {
+  display: flex; align-items: center; gap: 10px; text-align: left; padding: 11px 12px;
+  border: 1px solid transparent; border-radius: 13px; background: transparent; color: var(--ink-2); transition: .18s ease;
+}
+.type-tab:hover { background: rgba(220,234,223,.55); }
+.type-tab.active { background: var(--green); color: #fff9ed; box-shadow: 0 8px 18px rgba(23,91,77,.18); }
+.type-icon {
+  width: 30px; height: 30px; border-radius: 9px; display: grid; place-items: center; flex: 0 0 auto;
+  background: rgba(23,91,77,.08); font-family: var(--serif); font-size: 17px; font-weight: 700;
+}
+.type-tab.active .type-icon { background: rgba(255,255,255,.13); }
+.type-tab strong { display: block; font-size: 12px; line-height: 1.25; }
+.type-tab small { display: block; margin-top: 2px; font-size: 9px; color: var(--muted); white-space: nowrap; }
+.type-tab.active small { color: rgba(255,255,255,.61); }
+
+.layout { display: grid; grid-template-columns: 326px minmax(0, 1fr) 296px; gap: 18px; align-items: start; }
+.control-column, .coach-column { position: sticky; top: 86px; max-height: calc(100vh - 104px); overflow: auto; scrollbar-width: thin; }
+.control-column::-webkit-scrollbar, .coach-column::-webkit-scrollbar { width: 5px; }
+.control-column::-webkit-scrollbar-thumb, .coach-column::-webkit-scrollbar-thumb { background: rgba(23,52,47,.15); border-radius: 4px; }
+.panel-card {
+  background: rgba(255,253,247,.76); border: 1px solid var(--line); border-radius: 20px; box-shadow: var(--shadow-sm);
+  padding: 18px;
+}
+.panel-card + .panel-card { margin-top: 12px; }
+.eyebrow { display: block; color: var(--gold); font-family: var(--mono); font-size: 9px; letter-spacing: .16em; font-weight: 700; }
+.panel-title { display: flex; align-items: flex-end; justify-content: space-between; gap: 10px; margin-bottom: 15px; }
+.panel-title h2 { margin: 5px 0 0; font-family: var(--serif); font-size: 20px; letter-spacing: -.02em; }
+.panel-title span { color: var(--muted); font-size: 10px; }
+.field-label { display: block; color: var(--muted); font-size: 10px; font-weight: 650; letter-spacing: .06em; margin: 0 0 7px; }
+.preset-select {
+  width: 100%; appearance: none; border: 1px solid var(--line); border-radius: 12px; background: var(--white);
+  background-image: linear-gradient(45deg, transparent 50%, var(--ink-2) 50%), linear-gradient(135deg, var(--ink-2) 50%, transparent 50%);
+  background-position: calc(100% - 16px) calc(50% - 2px), calc(100% - 11px) calc(50% - 2px);
+  background-size: 5px 5px, 5px 5px; background-repeat: no-repeat; padding: 11px 34px 11px 12px;
+  font-size: 12px; font-weight: 620; color: var(--ink); cursor: pointer;
+}
+.field-hint { color: var(--muted); font-size: 10px; line-height: 1.65; margin-top: 8px; }
+.section-kicker { display: flex; align-items: center; gap: 8px; margin: 20px 0 9px; color: var(--ink-2); font-size: 10px; font-weight: 750; letter-spacing: .07em; text-transform: uppercase; }
+.section-kicker::after { content: ""; flex: 1; height: 1px; background: var(--line-soft); }
+.mode-toggle {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px; position: relative;
+  padding: 9px 0; border-bottom: 1px dashed var(--line-soft);
+}
+.mode-toggle:last-child { border-bottom: 0; }
+.mode-toggle span { display: flex; flex-direction: column; gap: 2px; }
+.mode-toggle strong { font-size: 11px; font-weight: 680; }
+.mode-toggle small { color: var(--muted); font-size: 9px; }
+.mode-toggle input { position: absolute; opacity: 0; pointer-events: none; }
+.mode-toggle i { width: 34px; height: 19px; border-radius: 999px; background: #d6d0c2; position: relative; transition: .18s ease; flex: 0 0 auto; }
+.mode-toggle i::after { content: ""; position: absolute; width: 13px; height: 13px; top: 3px; left: 3px; border-radius: 50%; background: #fff; box-shadow: 0 1px 5px rgba(0,0,0,.2); transition: .18s ease; }
+.mode-toggle input:checked + i { background: var(--green); }
+.mode-toggle input:checked + i::after { transform: translateX(15px); }
+.control-group { border-top: 1px solid var(--line-soft); }
+.control-group:first-child { border-top: 0; margin-top: 12px; }
+.control-group summary {
+  list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  padding: 13px 0 8px; font-size: 11px; font-weight: 750; color: var(--ink); letter-spacing: .01em;
+}
+.control-group summary::-webkit-details-marker { display: none; }
+.control-group summary::before { content: "+"; color: var(--gold); font-family: var(--mono); font-size: 13px; margin-right: 3px; }
+.control-group[open] summary::before { content: "−"; }
+.control-group summary span { flex: 1; }
+.control-group summary small { color: var(--muted); font-size: 9px; font-weight: 500; }
+.control-body { padding: 0 0 11px 17px; }
+.control-row { display: block; margin: 0 0 14px; }
+.control-label { display: block; margin-bottom: 6px; color: var(--ink-2); font-size: 10px; font-weight: 650; }
+.control-row select {
+  width: 100%; max-width: 100%; padding: 9px 28px 9px 10px; border: 1px solid var(--line); border-radius: 9px; background: #fffdf7;
+  font-size: 10.5px; color: var(--ink); appearance: auto; cursor: pointer;
+}
+.control-note { display: block; margin-top: 6px; color: var(--muted); font-size: 9px; line-height: 1.55; }
+.control-actions { display: flex; gap: 8px; margin-top: 14px; }
+.action-btn {
+  flex: 1; padding: 10px 11px; border-radius: 10px; border: 1px solid var(--line); background: var(--white);
+  font-size: 10.5px; font-weight: 650; color: var(--ink-2); transition: .18s ease;
+}
+.action-btn:hover { border-color: var(--green); transform: translateY(-1px); }
+.action-btn.danger:hover { color: var(--coral); border-color: var(--coral); }
+
+.workspace { min-width: 0; }
+.prompt-card {
+  border-radius: 20px; padding: 21px 23px 19px; border: 1px solid var(--line); background: linear-gradient(135deg, rgba(255,253,247,.9), rgba(244,239,225,.72));
+  box-shadow: var(--shadow-sm); margin-bottom: 13px;
+}
+.prompt-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.type-chip {
+  display: inline-flex; align-items: center; padding: 5px 9px; border-radius: 999px; background: var(--mint); color: var(--green);
+  font-size: 9px; font-weight: 750; letter-spacing: .04em; white-space: nowrap;
+}
+.prompt-card h2 { margin: 10px 0 8px; font-family: var(--serif); font-size: 25px; letter-spacing: -.025em; }
+.prompt-card p { margin: 0; color: var(--muted); font-size: 11px; line-height: 1.75; }
+.prompt-foot { display: flex; justify-content: space-between; gap: 12px; margin-top: 14px; padding-top: 12px; border-top: 1px dashed var(--line); color: #899790; font-family: var(--mono); font-size: 8.5px; letter-spacing: .02em; }
+.paper {
+  border-radius: 24px; border: 1px solid rgba(155,139,108,.3); background: var(--white);
+  box-shadow: var(--shadow); overflow: hidden; position: relative;
+}
+.paper::before { content: ""; position: absolute; inset: 0; pointer-events: none; background-image: linear-gradient(rgba(23,52,47,.035) 1px, transparent 1px); background-size: 100% 32px; opacity: .35; }
+.paper-head { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 18px 24px 14px; border-bottom: 1px solid var(--line-soft); }
+.paper-head h2 { margin: 0; font-family: var(--serif); font-size: 17px; letter-spacing: -.01em; }
+.paper-head span { color: var(--muted); font-family: var(--mono); font-size: 9px; }
+.essay-preview { position: relative; padding: 7px 26px 2px; }
+.essay-paragraph { padding: 19px 0 20px; border-bottom: 1px solid var(--line-soft); }
+.essay-paragraph:last-child { border-bottom: 0; }
+.paragraph-heading { display: flex; align-items: flex-start; gap: 11px; margin-bottom: 12px; }
+.para-index { width: 26px; height: 26px; flex: 0 0 auto; border-radius: 8px; display: grid; place-items: center; background: var(--paper-2); color: var(--gold); font-family: var(--mono); font-size: 9px; font-weight: 700; }
+.paragraph-heading h3 { margin: 0; font-family: var(--serif); font-size: 16px; }
+.paragraph-heading p { margin: 2px 0 0; color: var(--muted); font-size: 9px; }
+.sentence-count { margin-left: auto; color: #a0aaa5; font-family: var(--mono); font-size: 8px; padding-top: 4px; white-space: nowrap; }
+.sentence-list { display: flex; flex-direction: column; gap: 11px; }
+.sentence-card { display: grid; grid-template-columns: 80px minmax(0, 1fr); gap: 13px; align-items: baseline; }
+.sentence-label {
+  text-align: left; padding: 0; border: 0; background: transparent; color: #8a9a93; font-family: var(--mono);
+  font-size: 8px; letter-spacing: .01em; line-height: 1.5; transition: color .15s ease;
+}
+.sentence-label:hover { color: var(--coral); }
+.sentence-body { font-family: var(--serif); font-size: 14.2px; line-height: 1.86; color: #203832; }
+.line-en { display: block; word-break: normal; overflow-wrap: break-word; }
+.line-zh { display: block; margin-top: 2px; color: #798a83; font-family: var(--sans); font-size: 10.5px; line-height: 1.7; }
+body.zh-off .line-zh { display: none; }
+.slot {
+  display: inline; padding: 1px 1px 2px; margin: 0; border-radius: 5px; border: 1px dashed transparent;
+  background: transparent; font-family: inherit; font-size: inherit; line-height: inherit; text-align: left; color: var(--ink);
+  text-decoration: none; box-decoration-break: clone; -webkit-box-decoration-break: clone; transition: .16s ease;
+  white-space: normal; vertical-align: baseline;
+}
+.slot.filled { background: rgba(220,234,223,.62); border-bottom-color: rgba(47,124,104,.34); color: #153e35; }
+.slot.filled:hover { background: #cfe5d5; border-color: var(--green-2); }
+.slot.empty { background: var(--coral-soft); border: 1px dashed rgba(212,103,75,.65); color: #a34b34; font-family: var(--sans); font-size: .8em; font-weight: 650; }
+.slot.empty:hover { background: #f1cfc3; border-style: solid; }
+.memo-footer { position: relative; display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 15px 24px; border-top: 1px solid var(--line-soft); background: rgba(244,239,225,.4); }
+.memo-meta { color: #909c96; font-family: var(--mono); font-size: 9px; }
+.copy-btn { border: 0; border-radius: 10px; padding: 10px 16px; background: var(--ink); color: #fff9ed; font-size: 10.5px; font-weight: 650; box-shadow: 0 6px 14px rgba(23,52,47,.16); }
+.copy-btn:hover { background: var(--green); }
+.paper-footnote { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; padding: 0 3px; }
+.paper-footnote span { color: #89958f; font-size: 9px; }
+.paper-footnote span::before { content: "·"; color: var(--gold); margin-right: 5px; }
+
+.coach-block { background: rgba(255,253,247,.78); border: 1px solid var(--line); border-radius: 18px; padding: 17px; box-shadow: var(--shadow-sm); }
+.coach-block + .coach-block { margin-top: 10px; }
+.completion-head { display: flex; align-items: baseline; justify-content: space-between; margin: 11px 0 9px; }
+.completion-head strong { font-family: var(--serif); font-size: 34px; font-weight: 600; letter-spacing: -.05em; color: var(--green); }
+.completion-head span { color: var(--muted); font-size: 9px; }
+.progress-track { height: 5px; overflow: hidden; border-radius: 999px; background: #e4dfd2; }
+.progress-track i { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--green), #63a780); transition: width .3s ease; }
+.metric-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 14px; }
+.metric-grid div { padding: 9px 7px; border-radius: 9px; background: var(--paper-2); text-align: center; }
+.metric-grid strong { display: block; font-family: var(--serif); font-size: 16px; }
+.metric-grid span { color: var(--muted); font-size: 8px; }
+.coach-block h3 { margin: 8px 0 6px; font-family: var(--serif); font-size: 17px; }
+.coach-block > p { color: var(--muted); font-size: 10px; line-height: 1.72; margin: 0; }
+.check-list { display: flex; flex-direction: column; gap: 7px; margin-top: 12px; }
+.check-list span { display: flex; align-items: flex-start; gap: 7px; color: var(--ink-2); font-size: 9.5px; line-height: 1.5; }
+.check-list i { width: 7px; height: 7px; margin-top: 4px; border-radius: 50%; flex: 0 0 auto; background: var(--green-2); }
+.check-list i.warn { background: var(--coral); }
+.tiny-note { position: relative; padding-left: 11px; margin: 8px 0 0; color: var(--muted); font-size: 9px; line-height: 1.65; }
+.tiny-note::before { content: ""; position: absolute; left: 0; top: 6px; width: 4px; height: 4px; border-radius: 50%; background: var(--gold); }
+.lecture-note { background: linear-gradient(145deg, var(--green), #103c33); border-color: transparent; }
+.lecture-note .eyebrow { color: #d9bd82; }
+.lecture-note p { color: rgba(255,255,255,.72); font-family: var(--serif); font-size: 11px; line-height: 1.78; }
+.lecture-note p::before { content: "“"; display: block; font-size: 28px; line-height: .7; color: #d9bd82; margin-bottom: 4px; }
+
+.drawer-overlay { position: fixed; inset: 0; z-index: 70; background: rgba(18,34,30,.35); opacity: 0; visibility: hidden; transition: .2s ease; backdrop-filter: blur(2px); }
+.slot-drawer {
+  position: fixed; top: 0; right: 0; z-index: 80; width: min(478px, 94vw); height: 100vh;
+  background: var(--paper); border-left: 1px solid rgba(255,255,255,.28); box-shadow: -30px 0 70px rgba(18,34,30,.18);
+  transform: translateX(102%); transition: transform .26s cubic-bezier(.22,.7,.2,1); display: flex; flex-direction: column;
+}
+.slot-drawer.open { transform: translateX(0); }
+.slot-drawer.open + .drawer-overlay, .drawer-overlay.open { opacity: 1; visibility: visible; }
+.drawer-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; padding: 24px 22px 16px; border-bottom: 1px solid var(--line); }
+.drawer-head h2 { margin: 6px 0 2px; font-family: var(--serif); font-size: 23px; letter-spacing: -.03em; }
+.drawer-head p { margin: 3px 0 0; color: var(--muted); font-size: 9px; }
+.icon-btn { width: 30px; height: 30px; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 9px; background: var(--white); color: var(--muted); font-size: 16px; }
+.icon-btn:hover { color: var(--coral); border-color: var(--coral); }
+.slot-current-box { margin: 13px 22px 0; padding: 12px 13px; border-radius: 11px; border: 1px solid var(--line); background: var(--white); }
+.slot-current-box span { display: block; color: var(--muted); font-family: var(--mono); font-size: 8px; letter-spacing: .08em; margin-bottom: 5px; }
+.slot-current-box strong { display: block; font-family: var(--serif); font-size: 13px; line-height: 1.5; word-break: break-word; }
+.drawer-tabs { display: flex; gap: 4px; padding: 14px 22px 0; }
+.drawer-tab, .library-tab { border: 0; border-radius: 8px; background: transparent; color: var(--muted); padding: 7px 10px; font-size: 9.5px; font-weight: 650; }
+.drawer-tab.active, .library-tab.active { background: var(--mint); color: var(--green); }
+.drawer-search { margin: 12px 22px 0; display: flex; align-items: center; gap: 8px; border: 1px solid var(--line); border-radius: 9px; padding: 8px 10px; background: var(--white); }
+.drawer-search span { color: var(--muted); font-size: 9px; }
+.drawer-search input { flex: 1; min-width: 0; border: 0; outline: 0; background: transparent; font-size: 10px; }
+.drawer-scroll { flex: 1; overflow: auto; padding: 12px 22px 20px; }
+.option-group + .option-group, .lexicon-group + .lexicon-group { margin-top: 16px; }
+.option-group-title { display: flex; align-items: center; gap: 8px; margin: 0 0 7px; color: var(--muted); font-family: var(--mono); font-size: 8px; letter-spacing: .08em; text-transform: uppercase; }
+.option-group-title span { padding: 2px 5px; border-radius: 999px; background: var(--paper-2); color: var(--gold); letter-spacing: 0; }
+.lex-option { width: 100%; display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 3px 12px; padding: 10px 11px; margin-bottom: 6px; text-align: left; border: 1px solid var(--line-soft); border-radius: 10px; background: rgba(255,253,247,.72); transition: .15s ease; }
+.lex-option:hover { border-color: rgba(47,124,104,.45); background: var(--white); transform: translateX(2px); }
+.lex-option.selected { border-color: var(--green); background: var(--mint); }
+.lex-en { font-family: var(--serif); font-size: 12px; line-height: 1.35; color: var(--ink); }
+.lex-cn { justify-self: end; color: var(--ink-2); font-size: 9px; white-space: nowrap; }
+.lex-tag { grid-column: 1 / -1; color: #9aa49f; font-family: var(--mono); font-size: 7.5px; letter-spacing: .05em; text-transform: uppercase; }
+.drawer-manual { padding: 14px 22px 20px; border-top: 1px solid var(--line); background: rgba(244,239,225,.45); }
+.manual-row { display: flex; gap: 7px; }
+.manual-row input { flex: 1; min-width: 0; padding: 10px 11px; border: 1px solid var(--line); border-radius: 9px; background: var(--white); font-size: 11px; }
+.manual-row button { border: 0; border-radius: 9px; padding: 0 14px; background: var(--green); color: #fff; font-size: 10px; font-weight: 650; }
+.manual-help { display: flex; justify-content: space-between; gap: 10px; margin-top: 8px; color: var(--muted); font-size: 8.5px; }
+.manual-help button { border: 0; background: transparent; padding: 0; color: var(--coral); font-size: 8.5px; }
+.empty-state { padding: 28px 18px; text-align: center; color: var(--muted); font-size: 10px; line-height: 1.7; border: 1px dashed var(--line); border-radius: 12px; }
+
+.library-modal { position: fixed; inset: 0; z-index: 100; background: rgba(17,32,28,.44); backdrop-filter: blur(4px); display: flex; align-items: center; justify-content: center; padding: 24px; opacity: 0; visibility: hidden; transition: .2s ease; }
+.library-modal.open { opacity: 1; visibility: visible; }
+.library-shell { width: min(1180px, 96vw); max-height: 90vh; display: flex; flex-direction: column; overflow: hidden; border-radius: 24px; border: 1px solid rgba(255,255,255,.4); background: var(--paper); box-shadow: 0 36px 100px rgba(18,34,30,.35); }
+.library-head { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 21px 25px 17px; border-bottom: 1px solid var(--line); background: var(--white); }
+.library-head h2 { margin: 5px 0 0; font-family: var(--serif); font-size: 23px; }
+.library-tabs { display: flex; gap: 4px; padding: 11px 25px; border-bottom: 1px solid var(--line); background: rgba(244,239,225,.55); overflow-x: auto; }
+.library-content { overflow: auto; padding: 24px 25px 30px; }
+.library-intro { max-width: 740px; margin-bottom: 22px; }
+.library-intro h2 { margin: 7px 0 7px; font-family: var(--serif); font-size: 28px; letter-spacing: -.035em; }
+.library-intro p { margin: 0; color: var(--muted); font-size: 11px; line-height: 1.8; }
+.library-search { display: flex; align-items: center; gap: 8px; width: min(420px,100%); margin-top: 14px; padding: 9px 11px; border: 1px solid var(--line); border-radius: 9px; background: var(--white); }
+.library-search span { color: var(--muted); font-size: 9px; }
+.library-search input { flex: 1; border: 0; outline: 0; background: transparent; font-size: 10px; }
+.library-bank { margin-top: 20px; }
+.library-bank-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 8px; padding-bottom: 6px; border-bottom: 1px solid var(--line-soft); }
+.library-bank-head h3 { margin: 0; font-family: var(--mono); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; }
+.library-bank-head span { color: var(--muted); font-size: 8px; }
+.chip-list { display: flex; flex-wrap: wrap; gap: 6px; }
+.phrase-chip { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; max-width: 270px; padding: 7px 9px; border: 1px solid var(--line-soft); border-radius: 8px; background: var(--white); text-align: left; }
+.phrase-chip:hover { border-color: var(--green-2); background: var(--mint); }
+.phrase-chip strong { font-family: var(--serif); font-size: 10.5px; line-height: 1.35; }
+.phrase-chip small { color: var(--muted); font-size: 8px; }
+.library-scheme-group { margin-top: 10px; border: 1px solid var(--line); border-radius: 12px; background: var(--white); overflow: hidden; }
+.library-scheme-group summary { display: flex; justify-content: space-between; gap: 12px; padding: 12px 14px; cursor: pointer; font-size: 10px; font-weight: 650; }
+.library-scheme-group summary small { color: var(--muted); font-size: 8px; }
+.scheme-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 8px; padding: 0 12px 13px; }
+.scheme-card { display: flex; flex-direction: column; gap: 5px; text-align: left; padding: 10px 11px; border: 1px solid var(--line-soft); border-radius: 9px; background: var(--paper); }
+.scheme-card:hover { border-color: var(--green); background: var(--mint); }
+.scheme-card strong { font-size: 10px; }
+.scheme-card span { color: var(--muted); font-size: 8.5px; line-height: 1.55; }
+.note-list { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 9px; }
+.note-card { display: grid; grid-template-columns: 25px 1fr; gap: 9px; padding: 13px; border: 1px solid var(--line); border-radius: 11px; background: var(--white); }
+.note-card > span { color: var(--gold); font-family: var(--mono); font-size: 8px; padding-top: 2px; }
+.note-card p { margin: 0; color: var(--ink-2); font-size: 9.5px; line-height: 1.65; }
+.exam-table { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 8px; }
+.exam-table > div { padding: 13px; border: 1px solid var(--line); border-radius: 11px; background: var(--white); }
+.exam-table strong { display: block; font-family: var(--serif); font-size: 15px; }
+.exam-table span { display: block; margin-top: 3px; color: var(--green); font-size: 9px; font-weight: 650; }
+.exam-table p { margin: 7px 0 0; color: var(--muted); font-size: 9px; line-height: 1.65; }
+.preset-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 9px; margin-top: 22px; }
+.preset-card { display: flex; flex-direction: column; align-items: flex-start; gap: 5px; padding: 13px; border: 1px solid var(--line); border-radius: 12px; background: var(--white); text-align: left; }
+.preset-card:hover { border-color: var(--green); transform: translateY(-1px); box-shadow: var(--shadow-sm); }
+.preset-card strong { font-family: var(--serif); font-size: 14px; }
+.preset-card small { color: var(--muted); font-size: 8px; }
+.preset-card p { margin: 2px 0 0; color: var(--muted); font-size: 8.5px; line-height: 1.55; }
+.toast { position: fixed; left: 50%; bottom: 28px; z-index: 150; transform: translate(-50%, 20px); opacity: 0; visibility: hidden; max-width: 88vw; padding: 10px 15px; border-radius: 999px; background: var(--ink); color: #fff9ed; box-shadow: 0 12px 30px rgba(0,0,0,.2); font-size: 10px; transition: .2s ease; }
+.toast.show { opacity: 1; visibility: visible; transform: translate(-50%, 0); }
+
+@media (max-width: 1180px) {
+  .layout { grid-template-columns: 296px minmax(0, 1fr); }
+  .coach-column { display: none; }
+  .type-tabs { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 600px), (max-height: 500px) and (max-width: 900px) {
+  .topbar { padding: 0 16px; height: 60px; }
+  .brand { min-width: 0; }
+  .brand-copy span, .offline-pill { display: none; }
+  .top-btn { padding: 7px 10px; font-size: 10px; }
+  .app-frame { padding: 18px 12px 32px; }
+  .masthead { padding: 27px 22px 25px; border-radius: 21px; }
+  .masthead h1 { font-size: 36px; }
+  .type-tabs { grid-template-columns: repeat(2, 1fr); }
+  .layout { display: flex; flex-direction: column; }
+  .workspace { order: 1; margin-bottom: 14px; }
+  .control-column { order: 2; position: static; max-height: none; margin-bottom: 14px; }
+  .control-column .panel-card { box-shadow: none; }
+  .sentence-card { grid-template-columns: 1fr; gap: 4px; }
+  .sentence-label { font-size: 8px; }
+  .essay-preview { padding: 3px 16px; }
+  .paper-head, .memo-footer { padding-left: 16px; padding-right: 16px; }
+  .prompt-card { padding: 17px; }
+  .prompt-foot { flex-direction: column; gap: 4px; }
+  .sentence-body { font-size: 13.8px; }
+  .library-modal { padding: 8px; }
+  .library-shell { max-height: 96vh; }
+  .scheme-grid, .note-list, .exam-table, .preset-grid { grid-template-columns: 1fr; }
+  .topbar .top-btn#library-help { display: none; }
+}
+@media print {
+  body { background: #fff; }
+  .topbar, .masthead, .type-tabs, .control-column, .coach-column, .prompt-card, .paper-head, .paper-footnote, .memo-footer, .drawer-overlay, .slot-drawer, .library-modal, .toast { display: none !important; }
+  .app-frame, .layout, .workspace, .paper { display: block; margin: 0; padding: 0; border: 0; box-shadow: none; }
+  .essay-preview { padding: 0; }
+  .sentence-body { font-size: 12pt; }
+  .slot { background: transparent !important; border: 0 !important; color: #000 !important; }
+}
+
+.copy-modal { position: fixed; inset: 0; z-index: 120; display: flex; align-items: center; justify-content: center; padding: 20px; background: rgba(17,32,28,.44); backdrop-filter: blur(4px); opacity: 0; visibility: hidden; transition: .2s ease; }
+.copy-modal.open { opacity: 1; visibility: visible; }
+.copy-shell { width: min(680px, 94vw); border-radius: 20px; padding: 20px; background: var(--paper); border: 1px solid rgba(255,255,255,.4); box-shadow: 0 30px 90px rgba(18,34,30,.35); }
+.copy-shell header { display: flex; align-items: flex-start; justify-content: space-between; gap: 15px; }
+.copy-shell h2 { margin: 6px 0 0; font-family: var(--serif); font-size: 23px; }
+.copy-shell p { margin: 12px 0; color: var(--muted); font-size: 10px; line-height: 1.7; }
+.copy-shell textarea { width: 100%; height: 260px; resize: vertical; padding: 13px; border: 1px solid var(--line); border-radius: 10px; background: var(--white); font-family: var(--serif); font-size: 12px; line-height: 1.7; }
+.copy-actions { display: flex; gap: 8px; margin-top: 10px; }
+.copy-actions .action-btn { flex: 0 0 auto; min-width: 100px; }
+
+/* Native iOS safe-area adaptation */
+html { -webkit-text-size-adjust: 100%; }
+@supports (padding: env(safe-area-inset-top)) {
+  body { min-height: 100dvh; }
+  .topbar {
+    height: calc(68px + env(safe-area-inset-top));
+    padding-top: env(safe-area-inset-top);
+    padding-left: max(18px, env(safe-area-inset-left));
+    padding-right: max(18px, env(safe-area-inset-right));
+  }
+  .app-frame {
+    padding-left: max(28px, env(safe-area-inset-left));
+    padding-right: max(28px, env(safe-area-inset-right));
+    padding-bottom: calc(48px + env(safe-area-inset-bottom));
+  }
+  .slot-drawer {
+    height: 100dvh;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .drawer-manual { padding-bottom: calc(20px + env(safe-area-inset-bottom)); }
+  .library-modal {
+    padding-top: calc(24px + env(safe-area-inset-top));
+    padding-bottom: calc(24px + env(safe-area-inset-bottom));
+    padding-left: max(24px, env(safe-area-inset-left));
+    padding-right: max(24px, env(safe-area-inset-right));
+  }
+  .copy-modal {
+    padding-top: calc(20px + env(safe-area-inset-top));
+    padding-bottom: calc(20px + env(safe-area-inset-bottom));
+    padding-left: max(20px, env(safe-area-inset-left));
+    padding-right: max(20px, env(safe-area-inset-right));
+  }
+  .toast { bottom: calc(28px + env(safe-area-inset-bottom)); }
+  @media (max-width: 600px), (max-height: 500px) and (max-width: 900px) {
+    .topbar { height: calc(60px + env(safe-area-inset-top)); padding-left: max(12px, env(safe-area-inset-left)); padding-right: max(12px, env(safe-area-inset-right)); }
+    .app-frame { padding-left: max(12px, env(safe-area-inset-left)); padding-right: max(12px, env(safe-area-inset-right)); }
+    .slot-drawer { width: 100vw; }
+    .library-modal { padding: calc(8px + env(safe-area-inset-top)) max(8px, env(safe-area-inset-right)) calc(8px + env(safe-area-inset-bottom)) max(8px, env(safe-area-inset-left)); }
+  }
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <div class="brand-mark">简</div>
+    <div class="brand-copy"><strong>研英 Build 27</strong><span>OFFLINE LETTER WORKBENCH</span></div>
+  </div>
+  <div class="topbar-spacer"></div>
+  <span class="offline-pill"><i></i>离线可用 · 无外部资源</span>
+  <button type="button" class="top-btn" id="settings-jump">模式</button>
+  <button type="button" class="top-btn" id="library-help">使用说明</button>
+  <button type="button" class="top-btn primary" id="library-open">句库总览</button>
+</header>
+
+<div class="app-frame">
+  <section class="masthead" aria-labelledby="main-title">
+    <div class="masthead-inner">
+      <span class="eyebrow">AI 归来 27 版讲义 · 小作文重排</span>
+      <h1 id="main-title">考研英语小作文<br><em>书信通知纪要组装台</em></h1>
+      <p>先选体裁，再选真题预设；称呼、第一段、第二段核心内容、第三段与落款逐句可选可改。第二段 50 句通用句库三类体裁共用，只换格式不换核心。</p>
+      <div class="masthead-stats" id="masthead-stats">
+        <span><strong>3</strong> 大体裁</span>
+        <span><strong>6</strong> 信件分支</span>
+        <span><strong>50</strong> 条第二段句库</span>
+        <span><strong>14</strong> 个真题预设</span>
+        <span>34 页讲义全通读</span>
+      </div>
+    </div>
+  </section>
+
+  <nav class="type-tabs" id="type-tabs" aria-label="体裁切换"></nav>
+
+  <div class="layout">
+    <aside class="control-column" aria-label="文章控制台">
+      <section class="panel-card">
+        <div class="panel-title"><div><span class="eyebrow">CONTROL DESK</span><h2>写作控制台</h2></div><span>实时重算</span></div>
+        <label class="field-label" for="preset-select">真题预设</label>
+        <select id="preset-select" class="preset-select" aria-label="真题预设"></select>
+        <p class="field-hint">切换预设会先存快照；任意槽位都可改成你自己的题目数据。</p>
+        <div class="section-kicker">模式开关</div>
+        <div id="mode-toggles"></div>
+      </section>
+      <section class="panel-card">
+        <div class="panel-title"><div><span class="eyebrow">SCHEME STACK</span><h2>句子方案</h2></div><span>逐句可换</span></div>
+        <div id="control-panel"></div>
+        <div class="control-actions">
+          <button type="button" class="action-btn" id="undo-btn">撤销</button>
+          <button type="button" class="action-btn danger" id="clear-btn">清空槽位</button>
+        </div>
+      </section>
+    </aside>
+
+    <main class="workspace" aria-label="全文预览区">
+      <section class="prompt-card" id="prompt-card"></section>
+      <section class="paper" aria-labelledby="preview-title">
+        <div class="paper-head">
+          <h2 id="preview-title">作答预览</h2>
+          <span>LIVE DRAFT · AUTO-SAVED</span>
+        </div>
+        <div class="essay-preview" id="essay-preview"></div>
+        <div class="memo-footer">
+          <span class="memo-meta" id="memo-meta">0 sentences · 0 words</span>
+          <button type="button" class="copy-btn" id="copy-btn">复制中英全文</button>
+        </div>
+      </section>
+      <div class="paper-footnote">
+        <span>未填槽位显示【标签】</span>
+        <span>已填槽位绿色高亮</span>
+        <span>状态自动保存</span>
+        <span>支持连续撤销</span>
+      </div>
+    </main>
+
+    <aside class="coach-column" aria-label="讲义批注与诊断">
+      <div id="coach-panel"></div>
+    </aside>
+  </div>
+</div>
+
+<div class="drawer-overlay" id="drawer-overlay"></div>
+<aside class="slot-drawer" id="slot-drawer" aria-hidden="true" aria-labelledby="slot-title">
+  <div class="drawer-head">
+    <div><span class="eyebrow">SLOT LIBRARY</span><h2 id="slot-title">槽位</h2><p id="slot-subtitle">可点选或手输</p></div>
+    <button type="button" class="icon-btn" id="drawer-close" aria-label="关闭槽位面板">×</button>
+  </div>
+  <div class="slot-current-box"><span>CURRENT VALUE</span><strong id="slot-current"></strong></div>
+  <div class="drawer-tabs">
+    <button type="button" class="drawer-tab active" data-drawer-tab="slot">本槽词库 · <span id="slot-option-count">0</span></button>
+    <button type="button" class="drawer-tab" data-drawer-tab="all">全讲义词库</button>
+  </div>
+  <label class="drawer-search"><span>筛选</span><input id="slot-search" type="search" placeholder="输入中文或英文关键词"></label>
+  <div class="drawer-scroll">
+    <div id="slot-bank-panel"><div id="slot-option-list"></div></div>
+    <div id="slot-all-panel" hidden><div id="slot-all-list"></div></div>
+  </div>
+  <div class="drawer-manual">
+    <div class="manual-row"><input id="manual-slot-input" type="text" placeholder="手输题干词"><button type="button" id="manual-apply">填入</button></div>
+    <div class="manual-help"><span>手输值会参与主谓一致与句首大写判断。</span><button type="button" id="slot-clear">清空槽位</button></div>
+  </div>
+</aside>
+
+<div class="library-modal" id="library-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="library-title">
+  <div class="library-shell">
+    <header class="library-head">
+      <div><span class="eyebrow">SOURCE MAP · 34 PAGES</span><h2 id="library-title">句库总览</h2></div>
+      <button type="button" class="icon-btn" id="library-close" aria-label="关闭句库总览">×</button>
+    </header>
+    <nav class="library-tabs" aria-label="资料分类">
+      <button type="button" class="library-tab active" data-library-tab="vocab">短语词库</button>
+      <button type="button" class="library-tab" data-library-tab="schemes">句子方案</button>
+      <button type="button" class="library-tab" data-library-tab="notes">注释与提醒</button>
+      <button type="button" class="library-tab" data-library-tab="overview">体裁地图 / 预设</button>
+    </nav>
+    <div class="library-content" id="library-content"></div>
+  </div>
+</div>
+
+<div class="copy-modal" id="copy-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="copy-modal-title">
+  <div class="copy-shell">
+    <header><div><span class="eyebrow">COPY FALLBACK</span><h2 id="copy-modal-title">全文已选中</h2></div><button type="button" class="icon-btn" id="copy-modal-close" aria-label="关闭复制面板">×</button></header>
+    <p>当前浏览器不允许自动写入剪贴板。文本已全选，按 ⌘C / Ctrl+C 即可复制。</p>
+    <textarea id="copy-fallback-text" readonly></textarea>
+    <div class="copy-actions"><button type="button" class="action-btn" id="copy-select-again">重新全选</button><button type="button" class="action-btn" id="copy-modal-close-bottom">关闭</button></div>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(() => {
+'use strict';
+
+/* ============================================================
+   小作文内容模型
+   来源：《27 考研英语小作文模板（英一英二通用）》34 页
+   结构：1 前言 / 2.1 书信 / 2.2 通知=告示 / 2.3 纪要
+   ============================================================ */
+
+const O = (v, cn, tag = '通用') => ({ v, cn, tag });
+const S = (label, note, lines) => ({ label, note, lines });
+const L = (en, zh, label = '') => ({ en, zh, label });
+
+/* ---------- 体裁 ---------- */
+const TYPES = [
+  { id: 'reply',    label: '答复信',  icon: '↩', short: '被动·对方认识你', intro: '根据来信回复：感谢、分享、答复、介绍、邀请回应' },
+  { id: 'official', label: '公务信函', icon: '✉', short: '主动·需自我介绍', intro: '邀请、建议、投诉、推荐、申请、求职、自荐' },
+  { id: 'notice',   label: '通知告示', icon: '▤', short: '公开·Notice', intro: '面向全体宣布活动、会议、比赛，格式独立' },
+  { id: 'minutes',  label: '纪要',    icon: '¶', short: 'Minutes of Meeting', intro: '会议纪要：时间地点目的参会人，逐条记录决议' }
+];
+
+/* ---------- 称呼库（PDF 第 5 页表） ---------- */
+const BANKS = {};
+
+BANKS.salutation = [
+  O('Dear Mr. Lee',   '只知姓（男）', '姓'),
+  O('Dear Ms. Lee',   '只知姓（女）', '姓'),
+  O('Dear Paul',      '只知名', '名'),
+  O('Dear John',      '只知名', '名'),
+  O('Dear Manager',   '只知职位·经理', '职位'),
+  O('Dear President', '只知职位·主席/校长', '职位'),
+  O('Dear Editor',    '只知职位·编辑', '职位'),
+  O('Dear Professor', '只知职位·教授', '职位'),
+  O('Dear Sir or Madam', '啥也不知道（正式）', '未知'),
+  O('Dear Friends',   '啥也不知道（群体）', '未知'),
+  O('Dear David',     '朋友/熟人', '熟人'),
+  O('Dear Professor Smith', '知姓的教授', '职位+姓')
+];
+
+/* ---------- 第一段·被动写信（答复信）背景提要 ---------- */
+BANKS.replyOpen = [
+  O("Thanks for your email. I'm so pleased to hear that", '谢谢来信，很高兴得知', '积极'),
+  O("Thanks for your email. I'm very glad to hear that", '谢谢来信，很高兴得知', '积极'),
+  O("Thanks for your email. I'm excited to hear that", '谢谢来信，很激动得知', '积极'),
+  O("Thanks for your email. I'm sorry to hear that", '谢谢来信，很遗憾得知', '消极'),
+  O("Thanks for your email. I'm disappointed to hear that", '谢谢来信，很失望得知', '消极'),
+  O('Thank you for sharing', '感谢你分享', '分享'),
+  O('I was delighted to receive your email about', '很高兴收到你关于…的来信', '积极'),
+  O("I'm sorry to hear that", '我很抱歉得知', '消极'),
+  O('I must apologize for', '我必须为…道歉', '道歉'),
+  O('I understand your concern about', '我理解您对…的担忧', '消极'),
+  O('I want to express my disappointment through this letter regarding', '我想通过这封信表达我对…的不满', '不满'),
+  O('I want to express my apology through this letter regarding', '我想通过这封信为…道歉', '道歉')
+];
+
+/* ---------- 第一段·通用寒暄 ---------- */
+BANKS.greeting = [
+  O('I hope this letter finds you well and', '展信佳，并且…', '通用'),
+  O('I hope this email finds you well and', '展信佳（邮件），并且…', '通用'),
+  O('It was a great pleasure to receive your email.', '收到您的来信，我深感愉快。', '通用'),
+  O('It gives me great pleasure to write to you.', '能给您写这封信，我倍感荣幸。', '通用'),
+  O('Allow me to extend my warmest greetings to you.', '请允许我向您致以最诚挚的问候。', '通用')
+];
+
+/* ---------- 第一段·来信意图（PDF 第 9 页大表） ---------- */
+BANKS.purpose = [
+  O('express my gratitude', '表达感谢', '感谢'),
+  O('appreciate your help', '感谢你的帮助', '感谢'),
+  O('clarify some misunderstandings', '澄清误会', '道歉'),
+  O('apologize for my mistake', '为我的过失道歉', '道歉'),
+  O('congratulate you on your success', '祝贺你成功', '祝贺'),
+  O('express my sympathy', '表达慰问', '慰问'),
+  O('extend my condolences for', '对…表示哀悼', '慰问'),
+  O('suggest some improvements', '提出改进建议', '建议'),
+  O('make several suggestions about', '就…提几点建议', '建议'),
+  O('seek your advice on', '就…征求你的意见', '征求'),
+  O('ask for your suggestions about', '征求你关于…的建议', '征求'),
+  O('complain about', '投诉…', '投诉'),
+  O('express my dissatisfaction with', '对…表示不满', '投诉'),
+  O('praise your excellent service', '表扬你出色的服务', '表扬'),
+  O('commend your excellent customer service', '称赞你出色的客服', '表扬'),
+  O('invite you to participate in', '邀请你参加', '邀请'),
+  O('invite you to attend', '邀请你出席', '邀请'),
+  O('inform you that', '通知你…', '通知'),
+  O('notify you of the meeting', '通知你会议事宜', '通知'),
+  O('accept your invitation', '接受你的邀请', '邀请回应'),
+  O('decline your invitation', '婉拒你的邀请', '邀请回应'),
+  O('inquire about', '咨询…', '咨询'),
+  O('reply to your email', '答复你的邮件', '答复'),
+  O('answer your questions', '回答你的问题', '答复'),
+  O('tell you more about', '多讲讲…', '介绍'),
+  O('share my thoughts about', '分享我对…的想法', '分享'),
+  O('share my feelings about', '分享我对…的感受', '分享'),
+  O('introduce it to you', '向你介绍它', '介绍'),
+  O('recommend it to you', '向你推荐它', '推荐'),
+  O('introduce myself', '自我介绍', '自荐'),
+  O('remind you that', '提醒你…', '提醒'),
+  O('draw your attention to', '提醒你注意…', '提醒'),
+  O('request your assistance', '请求你的帮助', '求助'),
+  O('offer my support', '提供我的帮助', '帮助'),
+  O('apply for admission', '申请入学', '申请'),
+  O('apply for a scholarship', '申请奖学金', '申请'),
+  O('apply for a position', '申请职位', '求职'),
+  O('submit my resignation', '提交辞呈', '辞职'),
+  O('formally resign from my present position', '正式辞去现职', '辞职'),
+  O('describe my recent plan', '描述我近期的计划', '计划'),
+  O('provide further details about the plan', '提供计划的更多细节', '计划'),
+  O('specify the event arrangement', '说明活动安排', '安排'),
+  O('outline my daily schedule', '概述我的日程', '安排'),
+  O('confirm our appointment', '确认我们的约定', '确认'),
+  O('summarize the main points of the meeting', '总结会议要点', '总结'),
+  O('highlight the importance of this matter', '强调此事的重要性', '强调'),
+  O('call on everyone to', '呼吁大家…', '呼吁'),
+  O('appeal to the public to', '呼吁公众…', '呼吁')
+];
+
+/* ---------- 第一段·自我介绍（公务信函） ---------- */
+BANKS.selfIntro = [
+  O('I am a student from the department of Art at a university.', '我是某大学艺术系的学生。', '学生'),
+  O('I am an undergraduate at a university, majoring in Art.', '我是某大学艺术专业本科生。', '学生'),
+  O('I am currently pursuing a degree in Art at a university.', '我目前在某大学攻读艺术学位。', '学生'),
+  O('As a member of the Student Union,', '作为学生会的一员，', '学生会'),
+  O('As a student in the Art Department,', '作为艺术系的学生，', '学生'),
+  O('As a volunteer of the organizing committee,', '作为组委会志愿者，', '志愿者'),
+  O('As a regular reader of your newspaper,', '作为贵报的常驻读者，', '读者')
+];
+
+/* ---------- 第一段·专用开头（邀请等） ---------- */
+BANKS.specialOpen = [
+  O('It is my honor to invite you to join in', '我很荣幸邀请您参加', '邀请'),
+  O('It is my honor to inform you that', '我很荣幸地通知您', '通知'),
+  O('It gives me immense pleasure to invite you to', '非常荣幸邀请您', '邀请'),
+  O('It is my great privilege to invite you to', '十分荣幸邀请您', '邀请')
+];
+
+/* ---------- 第二段·第一句过渡句（PDF 第 12 页） ---------- */
+BANKS.transition = [
+  O('There are at least two factors accounting for my', '至少有两个因素说明我的…', '原因型'),
+  O('There are at least three factors accounting for my', '至少有三个因素说明我的…', '原因型'),
+  O('The primary reasons for my', '我…的主要原因是', '原因型'),
+  O('The reasons for my', '我…的原因是', '原因型'),
+  O('The details can be listed as follows.', '细节如下。', '列举型'),
+  O('As for the questions you raised, here are my answers.', '关于你提的问题，我的回答如下。', '答复型'),
+  O('Let me answer your questions one by one.', '让我逐一回答你的问题。', '答复型')
+];
+
+/* ---------- 第二段·50 句分组（PDF 第 13-20 页） ---------- */
+BANKS.infoTime = [
+  O('The meeting will be held in the conference center at 8:00 a.m. on Sunday, December 19th.', '会议将于 12 月 19 日周日上午 8 点在会议中心举行。', '1 时间地点'),
+  O('Our university will host the activity in the student activity center on Sunday, December 19th.', '我校将于 12 月 19 日周日在学生活动中心举办活动。', '2 时间地点'),
+  O('The English corner is scheduled to take place in the library on Friday from 7:00 to 8:00 p.m.', '英语角定于周五晚 7 点到 8 点在图书馆举行。', '3 时间地点'),
+  O('On Sunday, December 19th, a departmental meeting will be held in the main hall, commencing at 8:00 a.m.', '12 月 19 日周日，部门会议将在主会场举行，上午 8 点开始。', '4 时间地点')
+];
+
+BANKS.infoTheme = [
+  O('The subject of the conference is', '会议的主题是', '5 主题'),
+  O('The theme of the conference is', '会议的主题是', '6 主题'),
+  O('The purpose of the conference is to discuss', '会议的目的是讨论', '7 主题'),
+  O('This conference aims to facilitate an in-depth discussion on', '本次会议旨在促进关于…的深入讨论', '8 主题'),
+  O('This event is held under the theme of', '本次活动在…的主题下举行', '8b 主题'),
+  O('Centered on the theme of, the event aims to', '以…为主题，活动旨在', '8c 分词升级')
+];
+
+BANKS.infoPeople = [
+  O('The event is anticipated to attract wide participation from both students and faculty members.', '预计活动将吸引学生和教职工广泛参与。', '9 参与范围'),
+  O('Students of all grades are eligible to enter the competition, including both domestic and international students.', '所有年级学生都有资格参赛，包括国内外学生。', '10 参与范围'),
+  O('We have invited leading figures from various sectors, including eminent scholars, renowned entrepreneurs, and senior media representatives.', '我们邀请了各界领军人物，包括杰出学者、知名企业家和资深媒体代表。', '11 参与范围'),
+  O('This event is expected to bring together a host of distinguished guests, including leading experts and scholars in the field.', '本次活动预计汇聚众多贵宾，包括业内顶尖专家学者。', '12 参与范围')
+];
+
+BANKS.infoFlow = [
+  O('Interesting activities such as singing contests and debate competitions will be held to arouse students\u2019 enthusiasm for', '将举办歌唱比赛、辩论赛等有趣活动，激发学生对…的热情', '13 流程'),
+  O('Participants will be divided into teams for a collaborative challenge, designed to foster teamwork and creative problem-solving.', '参与者将分组进行协作挑战，旨在培养团队精神和创造性解决问题的能力。', '14 流程'),
+  O('The event will commence with an opening ceremony, followed by a series of workshops and a keynote speech, and will conclude with a discussion session.', '活动以开幕式开始，随后是研讨会和主题演讲，最后以讨论环节收尾。', '15 流程'),
+  O('Following the opening ceremony, the event will feature a keynote speech, workshops, and a concluding discussion session for participant interaction.', '开幕式后将有主题演讲、工作坊以及最终互动讨论环节。', '16 流程')
+];
+
+BANKS.infoReward = [
+  O('This will be a memorable and rewarding experience and the prizes and souvenirs will be very valuable.', '这将是一次难忘而有收获的经历，奖品和纪念品都很丰厚。', '17 画饼'),
+  O('To encourage more students to join, the top three winners will receive trophies and certificates, and all shortlisted participants will be awarded bonus points.', '为鼓励更多学生参加，前三名将获颁奖杯和证书，所有入围者都将获得加分。', '18 画饼'),
+  O('During the event, you will have the opportunity to meet like-minded individuals, engage in interesting activities, and enjoy a great time together.', '活动期间你将有机会结识志同道合的人，参与有趣活动，共度美好时光。', '19 画饼'),
+  O('This activity offers a precious opportunity to broaden your horizons and enrich your campus life.', '这次活动提供了开阔视野、丰富校园生活的宝贵机会。', '20 画饼')
+];
+
+BANKS.recommendObject = [
+  O('is one of the most popular scenic spots in the world', '是世界上最受欢迎的景点之一', '21 景点'),
+  O('is one of the most famous scenic spots in China', '是中国最著名的景点之一', '21 景点'),
+  O('is one of the most popular books in the world', '是世界上最受欢迎的书之一', '22 书籍'),
+  O('is one of the most famous movies in the world', '是世界上最著名的电影之一', '22 电影'),
+  O('was an outstanding scientist during the Northern Song Dynasty', '是北宋时期一位杰出的科学家', '23 名人'),
+  O('is one of the most popular events in our university', '是我校最受欢迎的活动之一', '24 活动')
+];
+
+BANKS.recommendWhy = [
+  O('While I understand that it has advantages, I believe the other one will provide you with a more profound and thought-provoking experience.', '虽然我知道它有优势，但我相信另一个会带给你更深刻、更发人深省的体验。', '25 对比推荐'),
+  O('I would highly recommend it for its exceptional quality and remarkable value.', '我强烈推荐它，因为它品质卓越、价值非凡。', '26 强烈推荐'),
+  O('What makes it highly recommendable is the unique experience it offers, which includes', '它之所以值得高度推荐，在于它提供的独特体验，其中包括', '27 独特体验')
+];
+
+BANKS.ability = [
+  O('Over the past few years, I have consistently excelled in my role, which is evidenced by the awards and recognition I have received.', '过去几年我一直表现出色，所获奖项和认可就是证明。', '28 能力'),
+  O('I am a highly self-motivated and resilient individual, capable of maintaining focus and productivity in fast-paced environments.', '我是高度自律且富有韧性的人，能在快节奏环境中保持专注和高效。', '29 能力'),
+  O('Not only am I eager to take on challenges, but I am also always ready to learn new things.', '我不仅乐于迎接挑战，也始终愿意学习新事物。', '29b 能力'),
+  O('I thrive in collaborative settings and have often been the one to facilitate communication and integrate diverse viewpoints.', '我在协作环境中能充分发挥，常充当促进沟通、整合不同观点的角色。', '30 能力')
+];
+
+BANKS.requirement = [
+  O('The selected candidates will assist in conducting surveys and collecting and analyzing data.', '被选中的候选人将协助调查、收集和分析数据。', '31 要求'),
+  O('Moreover, the candidates should be enthusiastic about the project and have sound organization and communication skills.', '此外，候选人应对项目充满热情，并具备良好的组织和沟通能力。', '31b 要求'),
+  O('The role requires the ability to analyze complex problems, develop practical solutions, and execute them effectively.', '该职位要求具备分析复杂问题、制定可行方案并有效执行的能力。', '32 要求'),
+  O('The candidates should have sound organization, communication, teaching and planning skills.', '候选人应具备良好的组织、沟通、教学和策划能力。', '33 要求'),
+  O('No previous experience is required, for we will provide full training and guidance.', '无需经验，我们将提供完整培训与指导。', '33b 万能')
+];
+
+BANKS.gratitude = [
+  O('I am extremely grateful to you for your unselfish assistance during the period of the program.', '我非常感谢你在项目期间给我的无私帮助。', '34 感谢'),
+  O('I am extremely grateful to you for your unselfish advice during the period of my study.', '我非常感谢你在学习期间给我的无私建议。', '34b 感谢'),
+  O('It is your hospitality that enabled me to', '正是你的款待使我能够', '35 感谢'),
+  O('It is your enthusiasm that enabled me to', '正是你的热情使我能够', '35b 感谢'),
+  O('Without your generous help, I would not have made such great progress in', '如果没有你的慷慨帮助，我不会在…取得如此大的进步', '36 感谢'),
+  O('Without your generous help, I would not have had such a wonderful experience.', '如果没有你的慷慨帮助，我不会拥有如此美妙的经历。', '37 感谢'),
+  O("Without your timely help, I'm afraid the consequences would have been truly serious.", '如果没有你的及时帮助，后果恐怕会非常严重。', '37b 感谢'),
+  O('All of us desire to improve our ability under your professional guidance.', '我们都希望在您的专业指导下提升能力。', '38 拍马屁')
+];
+
+BANKS.apologyMakeup = [
+  O('To make up for it, I am ready to immediately correct the mistake.', '为弥补过失，我准备立即纠正错误。', '39 道歉'),
+  O('To make up for it, I am ready to offer my full assistance to resolve the matter.', '为弥补过失，我愿全力协助解决此事。', '39b 道歉'),
+  O('I assure you that I have learned a valuable lesson from this and will take concrete steps to ensure it does not happen again.', '我向你保证已吸取教训，并将采取具体措施确保不再发生。', '40 道歉')
+];
+
+BANKS.universal = [
+  O('We are badly in need of something, which can help us.', '我们急需某物，它能帮助我们。', '41 万能'),
+  O('We are in urgent need of something, which can help us.', '我们迫切需要某物，它能帮助我们。', '41b 万能'),
+  O('Due to certain reasons, it is inconvenient for us to', '由于某些原因，我们不方便…', '42 万能'),
+  O('Due to certain reasons, it is impossible for us to', '由于某些原因，我们不可能…', '42b 万能'),
+  O('I wonder if you can do something so that I can', '我想知道你是否能做什么，以便我能', '43 万能'),
+  O('We could have more opportunities to improve if you could make some changes.', '如果你能做些改进，我们会有更多提升的机会。', '44 万能'),
+  O('It is advisable to take action, which can really help you.', '采取行动是明智的，这确实能帮到你。', '45 万能'),
+  O('Given the fact that things are changing, it would be wise for us to adapt.', '鉴于情况在变化，我们做出调整才是明智的。', '46 万能'),
+  O('This provides a unique opportunity to let you explore your creativity.', '这提供了一个独特的机会，让你探索自己的创造力。', '47 万能'),
+  O('Everyone agrees that your effort is the key to the satisfactory outcome.', '大家都认为你的努力是取得满意结果的关键。', '48 万能'),
+  O('This allows you to experience different cultures and social customs.', '这能让你体验不同的文化和社会习俗。', '49 万能'),
+  O('I am confident that the students will not only have the opportunity to learn from you, but also to draw inspiration from your example.', '我相信学生们不仅有机会向您学习，还能从您的榜样中汲取灵感。', '50 万能')
+];
+
+/* ---------- 第二段连接词 ---------- */
+BANKS.connector = [
+  O('Firstly,', '首先，', '列举'),
+  O('First and foremost,', '首要的是，', '列举'),
+  O('To begin with,', '首先，', '列举'),
+  O('In the first place,', '第一，', '列举'),
+  O('Moreover,', '此外，', '递进'),
+  O('What\u2019s more,', '更重要的是，', '递进'),
+  O('In addition,', '另外，', '递进'),
+  O('Additionally,', '此外，', '递进'),
+  O('In the second place,', '第二，', '列举'),
+  O('Finally,', '最后，', '收尾'),
+  O('In the end,', '最后，', '收尾'),
+  O('Last but not least,', '最后但同样重要的是，', '收尾')
+];
+
+/* ---------- 第三段·情感句（PDF 第 27 页） ---------- */
+BANKS.closingEmotion = [
+  O('I would like to express my gratitude for your kind consideration of my suggestion.', '感谢您考虑我的建议。', '感谢'),
+  O('I would like to express my gratitude for your kind consideration of my application.', '感谢您考虑我的申请。', '感谢'),
+  O('Please accept my sincere apology for any inconvenience that I have caused.', '给您带来的不便，请接受我诚挚的歉意。', '道歉'),
+  O('I hope all the members will enjoy the journey.', '我希望所有成员都能享受这段旅程。', '祝愿'),
+  O('For more information about the activity, please do not hesitate to contact me.', '如需了解更多活动信息，请随时联系我。', '联系'),
+  O('We would appreciate it very much if you could accept our invitation.', '如果您能接受我们的邀请，我们将不胜感激。', '邀请'),
+  O('We hope for your active participation and make this event a grand success.', '我们期待您的积极参与，共同使本次活动圆满成功。', '邀请'),
+  O('It would be our great honor if you could grace the occasion with your presence.', '如若您能莅临，我们将倍感荣幸。', '邀请')
+];
+
+/* ---------- 第三段·问候家人 ---------- */
+BANKS.familyRegards = [
+  O('Please give my best regards to your family.', '请代我向你的家人问好。', '问候'),
+  O('Please send my best wishes to your family.', '请向你的家人致以最美好的祝愿。', '问候'),
+  O('Kindly send my sincere regards to your family.', '请向你的家人转达我诚挚的问候。', '问候')
+];
+
+/* ---------- 第三段·期待回信 ---------- */
+BANKS.expectReply = [
+  O('I would be grateful if you could reply at your earliest convenience.', '如果您能在方便时尽快回复，我将不胜感激。', '期待'),
+  O('Your prompt reply will be highly appreciated.', '非常感谢您的及时回复。', '期待'),
+  O('I am looking forward to hearing from you soon.', '我期待很快收到您的来信。', '期待')
+];
+
+/* ---------- 通知·第一段概况（PDF 第 29 页） ---------- */
+BANKS.noticeOpen = [
+  O('It is a pleasure to inform everyone that a conference will be held in our university.', '很高兴通知大家，我校将举办一场会议。', '概况'),
+  O('We are pleased to announce that a workshop will be held in our university.', '我们很高兴宣布，我校将举办一场工作坊。', '概况'),
+  O('Attention all students interested in the activity on campus!', '校园里所有对活动感兴趣的同学请注意！', '呼吁'),
+  O("To enrich students' extracurricular life and improve communication among club members, our club will host a wonderful activity.", '为丰富学生课外生活、增进社团成员交流，我们社团将举办一场精彩活动。', '目的')
+];
+
+BANKS.noticePurpose = [
+  O('This notice is intended to introduce some details of this contest.', '本通知旨在介绍本次比赛的一些细节。', '目的'),
+  O('This notice serves the purpose of introducing some of the activities.', '这则通知旨在介绍部分活动。', '目的'),
+  O('The relevant matters are hereby notified as follows.', '现将相关事宜通知如下。', '正式'),
+  O('The following are the notifications of the relevant matters.', '以下是有关事项的通知。', '正式')
+];
+
+/* ---------- 通知·第三段报名（PDF 第 31 页） ---------- */
+BANKS.noticeSignup = [
+  O('If you are interested in singing, this will be a memorable experience for you. Please email us at 123456@qq.com to sign up.', '如果你喜欢唱歌，这将是一次难忘的经历。请发邮件至 123456@qq.com 报名。', '邮件报名'),
+  O('You are welcome to join us. If you are interested in this activity, please do not hesitate to email us at 123456@qq.com.', '欢迎加入我们。如果你对活动感兴趣，请不要犹豫，发邮件至 123456@qq.com。', '邮件报名'),
+  O('If you are passionate about it, this is an ideal opportunity for you! To apply, please email us at 123456@qq.com.', '如果你对它充满热情，这对你来说是理想的机会！报名请发邮件至 123456@qq.com。', '邮件报名'),
+  O('We look forward to your active participation and believe this activity will bring you an unforgettable experience! Please scan the QR code below to sign up!', '期待大家积极参与，相信本次活动将带来难忘体验！请扫描下方二维码报名！', '扫码报名')
+];
+
+/* ---------- 通知·万能尾句（PDF 第 31 页） ---------- */
+BANKS.noticeTail = [
+  O('Please arrange your time in advance and attend the activity on time.', '请各位提前安排好时间，准时参加活动。', '提醒'),
+  O('During the activity, please observe the on-site order and follow the arrangements of the staff.', '活动期间请遵守现场秩序，听从工作人员安排。', '秩序'),
+  O('In order to ensure the smooth progress of the activity, please actively cooperate and jointly create a good atmosphere.', '为确保活动顺利进行，请大家积极配合，共同营造良好氛围。', '秩序')
+];
+
+/* ---------- 纪要·导入与目的（PDF 第 32-33 页） ---------- */
+BANKS.minutesOpen = [
+  O('The meeting commenced with a warm welcome from the host, followed by an introduction to the purpose of gathering.', '主持人首先对大家的到来表示热烈欢迎，随后介绍了会议目的。', '导入'),
+  O('The university representative delivered welcoming remarks, and provided a brief overview of the significance of the theme.', '校方代表致欢迎辞，并简要介绍主题的意义。', '导入')
+];
+
+BANKS.minutesAim = [
+  O('The meeting aimed to briefly review the activity held last week.', '本次会议旨在简要回顾上周的活动。', '目的'),
+  O('The meeting aimed to make a plan for the activity to be held next week.', '本次会议旨在为下周活动制定计划。', '目的'),
+  O('The meeting aimed to discuss the problem and find some suitable solutions.', '本次会议旨在讨论该问题并找到合适的解决方案。', '目的'),
+  O('Many students participated in the discussion.', '许多同学参与了讨论。', '补充')
+];
+
+BANKS.minutesOpinion = [
+  O('The chairman expressed the opinion that enough attention must be paid to this issue.', '主席表示必须对此问题给予足够重视。', '发言'),
+  O('Experts believe that concrete measures should be taken immediately.', '专家认为应立即采取具体措施。', '发言'),
+  O('The majority of workers think that the plan is practical and feasible.', '大多数员工认为该计划切实可行。', '发言'),
+  O('A detailed presentation was delivered by the speaker, highlighting the mission, vision, and achievements of the project.', '发言人做了详细介绍，强调了项目的使命、愿景和成就。', '发言')
+];
+
+BANKS.minutesAgree = [
+  O('The majority of those attendees were in favour of the statement.', '大多数参会人都赞成这一表述。', '赞同'),
+  O('The majority of those attendees were in favour of the plan.', '大多数参会人都赞成这一计划。', '赞同'),
+  O('Participants engaged in an interactive discussion to address the challenges they faced during the activity.', '参会人进行了互动讨论，以解决活动中面临的挑战。', '讨论')
+];
+
+BANKS.minutesDecision = [
+  O('The meeting agreed to hold the activity.', '会议同意举办该活动。', '决议'),
+  O('As a concrete measure, the meeting decided that a follow-up meeting would be arranged.', '作为具体措施，会议决定安排一次后续会议。', '决议'),
+  O('The meeting concluded with a vote of thanks extended to all participants for their active involvement and commitment.', '会议最后向所有参会者表示感谢，感谢他们的积极参与和投入。', '收尾')
+];
+
+BANKS.minutesNext = [
+  O('The date and location of the next meeting will be announced via email to all participants.', '下次会议的日期和地点将通过邮件通知所有参会者。', '下次'),
+  O('', '（一次性会议，不写下次会议）', '留空')
+];
+
+/* ---------- 落款 ---------- */
+BANKS.signOff = [
+  O('Yours sincerely,', '此致敬礼（正式）', '正式'),
+  O('Yours faithfully,', '此致敬礼（不知姓名）', '正式'),
+  O('Best regards,', '祝好', '半正式'),
+  O('Yours truly,', '谨上', '正式')
+];
+
+BANKS.signName = [
+  O('Li Ming', '李明（通用署名）', '通用'),
+  O('Zhang Wei', '张伟（英二常用）', '通用')
+];
+
+/* ============================================================
+   句子方案 SCHEMES
+   ============================================================ */
+
+const SCHEMES = {
+  greeting: {
+    g1: S('第一段｜被动回信·背景提要', '对方来信是赞美/分享/询问时用积极版；是投诉/坏消息时用消极版。省略号内容摘抄或改编自题干。', [
+      L('{{replyOpen}} that {{topic}}.', '{{replyOpenZh}}{{topicZh}}。', '背景提要'),
+      L('{{replyOpen}} {{topic}}.', '{{replyOpenZh}}{{topicZh}}。', '背景提要·短')
+    ]),
+    g2: S('第一段｜被动回信·寒暄＋意图', '展信佳 + 来信意图两句连用，是最稳的开头。', [
+      L('{{greeting}} {{topic}} is what I would like to talk about.', '{{greetingZh}}我想谈的正是{{topicZh}}。', '寒暄'),
+      L('I am writing to {{purpose}}.', '我写信是为了{{purposeZh}}。', '来信意图')
+    ]),
+    g3: S('第一段｜被动回信·直接入题', '答复信无需自我介绍，直入主题即可。', [
+      L('I am writing to {{purpose}}.', '我写信是为了{{purposeZh}}。', '来信意图'),
+      L('I am writing this letter in order to {{purpose}}.', '我写这封信是为了{{purposeZh}}。', '来信意图·正式')
+    ]),
+    g4: S('第一段｜问候式寒暄', '对方是熟人、朋友时可用。', [
+      L('I hope this letter finds you well.', '展信佳，祝一切安好。', '寒暄'),
+      L('How is everything going with you?', '你最近一切都好吗？', '寒暄')
+    ])
+  },
+
+  official: {
+    o1: S('第一段｜公务信函·自我介绍＋意图', '对方不知道你的身份，必须先自我介绍。题干未给出时默认学生。', [
+      L('{{selfIntro}} I am writing to {{purpose}}.', '{{selfIntroZh}}我写信是为了{{purposeZh}}。', '自介+意图'),
+      L('{{selfIntro}} I am writing this letter to {{purpose}}.', '{{selfIntroZh}}我写这封信是为了{{purposeZh}}。', '自介+意图·正式')
+    ]),
+    o2: S('第一段｜公务信函·荣幸式开头', '邀请信、通知类最常用，语气正式又不生硬。', [
+      L('{{specialOpen}} {{topic}}.', '{{specialOpenZh}}{{topicZh}}。', '荣幸式'),
+      L('{{specialOpen}} {{topic}}, and I am writing to {{purpose}}.', '{{specialOpenZh}}{{topicZh}}，我写信是为了{{purposeZh}}。', '荣幸式+意图')
+    ]),
+    o3: S('第一段｜公务信函·目的前置', '场景较严肃时用，正式度高。', [
+      L('The purpose of this letter is to {{purpose}}.', '本信旨在{{purposeZh}}。', '目的前置'),
+      L('My purpose in writing this letter is to {{purpose}}.', '我写此信的目的在于{{purposeZh}}。', '目的前置·正式')
+    ])
+  },
+
+  body: {
+    b1: S('第二段｜时间地点＋活动主题＋参与范围', 'PDF 第 13-15 页 1-12 句组合：先交代何时何地，再讲主题，最后说谁参加。', [
+      L('{{c1}} {{infoTime}}', '{{c1Zh}}{{infoTimeZh}}', '时间地点'),
+      L('{{c2}} {{infoTheme}}.', '{{c2Zh}}{{infoThemeZh}}。', '主题目的'),
+      L('{{c3}} {{infoPeople}}', '{{c3Zh}}{{infoPeopleZh}}', '参与范围')
+    ]),
+    b2: S('第二段｜流程环节＋奖品收获', 'PDF 13-16、17-20 句：活动怎么走，参加有什么好处。', [
+      L('{{c1}} {{infoFlow}}', '{{c1Zh}}{{infoFlowZh}}', '流程环节'),
+      L('{{c2}} {{infoReward}}', '{{c2Zh}}{{infoRewardZh}}', '奖品收获'),
+      L('{{c3}} {{universal}}', '{{c3Zh}}{{universalZh}}', '万能补一句')
+    ]),
+    b3: S('第二段｜推荐＋理由＋好处', 'PDF 21-27 句：先点推荐对象，再给理由，最后讲收获。', [
+      L('{{c1}} {{recommendObject}}.', '{{c1Zh}}{{recommendObjectZh}}。', '推荐对象'),
+      L('{{c2}} {{recommendWhy}} {{extra}}.', '{{c2Zh}}{{recommendWhyZh}}{{extraZh}}。', '推荐理由'),
+      L('{{c3}} {{universal}}', '{{c3Zh}}{{universalZh}}', '收获')
+    ]),
+    b4: S('第二段｜能力展示＋岗位要求', 'PDF 28-33 句：自荐、求职、招募志愿者、找队友都可用。', [
+      L('{{c1}} {{ability}}', '{{c1Zh}}{{abilityZh}}', '能力展示'),
+      L('{{c2}} {{requirement}}', '{{c2Zh}}{{requirementZh}}', '岗位要求'),
+      L('{{c3}} {{universal}}', '{{c3Zh}}{{universalZh}}', '补充')
+    ]),
+    b5: S('第二段｜感谢＋弥补', 'PDF 34-40 句：感谢信用 34-38，道歉信用 39-40。', [
+      L('{{c1}} {{gratitude}}', '{{c1Zh}}{{gratitudeZh}}', '感谢'),
+      L('{{c2}} {{apologyMakeup}}', '{{c2Zh}}{{apologyMakeupZh}}', '弥补'),
+      L('{{c3}} {{universal}}', '{{c3Zh}}{{universalZh}}', '补充')
+    ]),
+    b6: S('第二段｜万能两连（41-50 句）', '小作文 100 词只需 2~3 句。41-50 全背，视情况把“我”和“你”互换。', [
+      L('{{c1}} {{universal}}', '{{c1Zh}}{{universalZh}}', '万能一'),
+      L('{{c2}} {{universal2}}', '{{c2Zh}}{{universal2Zh}}', '万能二')
+    ]),
+    b6x: S('第二段｜万能三连（多一句）', '正文偏短、想再补一句时用。三句全填会超过 100 词。', [
+      L('{{c1}} {{universal}}', '{{c1Zh}}{{universalZh}}', '万能一'),
+      L('{{c2}} {{universal2}}', '{{c2Zh}}{{universal2Zh}}', '万能二'),
+      L('{{c3}} {{universal3}}', '{{c3Zh}}{{universal3Zh}}', '万能三')
+    ]),
+    b7: S('第二段｜过渡句＋分点', 'PDF 第 12 页：先给过渡句，再分两三点说明。最通用。', [
+      L('{{transition}}', '{{transitionZh}}', '过渡句'),
+      L('{{c1}} {{universal}}', '{{c1Zh}}{{universalZh}}', '分点一'),
+      L('{{c2}} {{universal2}}', '{{c2Zh}}{{universal2Zh}}', '分点二')
+    ])
+  },
+
+  closing: {
+    c1: S('第三段｜情感＋期待回信', '标准收尾：先表态，再请对方回信。', [
+      L('{{closingEmotion}} {{expectReply}}', '{{closingEmotionZh}}{{expectReplyZh}}', '情感+期待')
+    ]),
+    c2: S('第三段｜情感＋问候家人', '对方是熟人、私人关系时用。', [
+      L('{{closingEmotion}} {{familyRegards}}', '{{closingEmotionZh}}{{familyRegardsZh}}', '情感+问候')
+    ]),
+    c3: S('第三段｜期待回信（简短）', '字数已够时只留一句。', [
+      L('{{expectReply}}', '{{expectReplyZh}}', '期待')
+    ])
+  },
+
+  notice: {
+    n1: S('第一段｜通知概况＋通知目的', 'PDF 第 29 页：先宣布，再说明本通知要讲什么。', [
+      L('{{noticeOpen}}', '{{noticeOpenZh}}', '概况'),
+      L('{{noticePurpose}}', '{{noticePurposeZh}}', '目的')
+    ]),
+    n2: S('第一段｜注意式开头', '面向全体学生的公开告示，语气更抓人。', [
+      L('Attention all students interested in {{topic}}!', '所有对{{topicZh}}感兴趣的同学请注意！', '呼吁'),
+      L('{{noticePurpose}}', '{{noticePurposeZh}}', '目的')
+    ])
+  },
+
+  noticeEnd: {
+    ne1: S('第三段｜发出邀请＋邮件报名', 'PDF 第 31 页：先鼓动，再给报名方式。', [
+      L('{{noticeSignup}}', '{{noticeSignupZh}}', '邀请报名'),
+      L('{{noticeTail}}', '{{noticeTailZh}}', '秩序提醒')
+    ]),
+    ne2: S('第三段｜报名＋秩序', '正文已够时只留秩序提醒。', [
+      L('{{noticeTail}}', '{{noticeTailZh}}', '秩序提醒')
+    ])
+  },
+
+  minutes: {
+    m1: S('纪要｜导入＋目的＋发言', 'PDF 第 32-33 页：主持人开场、说明目的、大佬发言。', [
+      L('{{minutesOpen}}', '{{minutesOpenZh}}', '导入'),
+      L('{{minutesAim}}', '{{minutesAimZh}}', '会议目的'),
+      L('{{minutesOpinion}}', '{{minutesOpinionZh}}', '发言')
+    ]),
+    m2: S('纪要｜讨论＋决议＋下次', '后半段：赞同、做出决定、可选下次会议。', [
+      L('{{minutesAgree}}', '{{minutesAgreeZh}}', '讨论赞同'),
+      L('{{minutesDecision}}', '{{minutesDecisionZh}}', '最终决定'),
+      L('{{minutesNext}}', '{{minutesNextZh}}', '下次会议')
+    ])
+  },
+
+  letterhead: {
+    lh1: S('称呼｜只知姓', 'PDF 第 5 页：只知道姓，男用 Mr.，女用 Ms.。', [
+      L('{{salutation}},', '{{salutationZh}}：', '称呼')
+    ]),
+    lh2: S('称呼｜只知名', '关系较近，直接称名。', [
+      L('{{salutation}},', '{{salutationZh}}：', '称呼')
+    ]),
+    lh3: S('称呼｜只知职位', '不知道姓名但知道身份。', [
+      L('{{salutation}},', '{{salutationZh}}：', '称呼')
+    ]),
+    lh4: S('称呼｜啥也不知道', '最保守写法，男女通用。', [
+      L('{{salutation}},', '{{salutationZh}}：', '称呼')
+    ])
+  },
+
+  signoff: {
+    s1: S('落款｜正式', '一般落款李明，写在右下角。', [
+      L('{{signOff}}', '{{signOffZh}}', '落款'),
+      L('{{signName}}', '{{signNameZh}}', '署名')
+    ]),
+    s2: S('落款｜半正式', '关系较近时用。', [
+      L('{{signOff}}', '{{signOffZh}}', '落款'),
+      L('{{signName}}', '{{signNameZh}}', '署名')
+    ])
+  }
+};
+
+/* ============================================================
+   真题预设 PRESETS
+   ============================================================ */
+
+/* 基座槽位：每个预设都必须有一份完整槽位表，避免切换到任何方案时出现空括号。
+   预设只写自己的差异项，最后与基座合并。 */
+const BASE_SLOTS = {
+  salutation: 'Dear Sir or Madam', salutationZh: '',
+  topic: 'the activity', topicZh: '这项活动',
+  purpose: 'express my gratitude', purposeZh: '表达我的感谢',
+  replyOpen: "Thanks for your email. I'm very glad to hear that", replyOpenZh: '谢谢你的来信。很高兴得知',
+  greeting: 'I hope this email finds you well and', greetingZh: '展信佳，并且',
+  selfIntro: 'As a student in the Art Department,', selfIntroZh: '作为艺术系的一名学生，',
+  specialOpen: 'It is my honor to invite you to join in', specialOpenZh: '我很荣幸邀请您参加',
+  transition: 'The details can be listed as follows.', transitionZh: '细节如下。',
+  need: 'some improvements in the service', needZh: '服务上的一些改进',
+  infoTime: 'The activity will be held in the student activity center at 8:00 a.m. on Sunday, December 19th',
+  infoTimeZh: '活动将于 12 月 19 日周日上午 8 点在学生活动中心举行。',
+  infoTheme: 'the purpose of the activity is to enrich our campus life',
+  infoThemeZh: '活动的目的是丰富我们的校园生活。',
+  infoPeople: 'Students of all grades are eligible to take part, including both domestic and international students',
+  infoPeopleZh: '所有年级的学生都有资格参加，包括国内和国际学生。',
+  infoFlow: 'a series of interesting activities such as workshops and discussions will be held to arouse students\u2019 enthusiasm',
+  infoFlowZh: '将举办工作坊、讨论等一系列有趣活动，以激发学生的热情。',
+  infoReward: 'This will be a memorable and rewarding experience and the prizes will be very valuable',
+  infoRewardZh: '这将是一次难忘而有收获的经历，奖品也非常丰厚。',
+  recommendObject: 'the art exhibition', recommendObjectZh: '这个艺术展',
+  recommendWhy: 'What makes it highly recommendable is the unique experience it offers',
+  recommendWhyZh: '它之所以值得高度推荐，在于它提供的独特体验。',
+  extra: 'an art performance', extraZh: '一场艺术表演',
+  ability: 'I am a highly self-motivated and resilient individual, capable of maintaining focus in fast-paced environments',
+  abilityZh: '我是高度自律且富有韧性的人，能在快节奏环境中保持专注。',
+  requirement: 'The candidates should be enthusiastic about the project and have sound organization and communication skills',
+  requirementZh: '候选人应对项目充满热情，并具备良好的组织和沟通能力。',
+  gratitude: 'I am extremely grateful to you for your unselfish assistance during the period of the program',
+  gratitudeZh: '我非常感谢你在项目期间给我的无私帮助。',
+  apologyMakeup: 'To make up for it, I am ready to immediately correct the mistake',
+  apologyMakeupZh: '为弥补过失，我准备立即纠正错误。',
+  universal: 'It is advisable to take action, which can really help you',
+  universalZh: '采取行动是明智的，这确实能帮到你。',
+  universal2: 'This allows you to experience different cultures and social customs',
+  universal2Zh: '这能让你体验不同的文化和社会习俗。',
+  universal3: 'Everyone agrees that your effort is the key to the satisfactory outcome',
+  universal3Zh: '大家都认为你的努力是取得满意结果的关键。',
+  closingEmotion: 'I would like to express my gratitude for your kind consideration of my suggestion.',
+  closingEmotionZh: '感谢您考虑我的建议。',
+  familyRegards: 'Please give my best regards to your family.', familyRegardsZh: '请代我向你的家人问好。',
+  expectReply: 'I am looking forward to hearing from you soon.', expectReplyZh: '我期待很快收到你的来信。',
+  noticeOpen: 'It is a pleasure to inform everyone that an activity will be held in our university',
+  noticeOpenZh: '很高兴地通知大家，我校将举办一场活动。',
+  noticePurpose: 'The relevant matters are hereby notified as follows', noticePurposeZh: '现将相关事宜通知如下。',
+  noticeSignup: 'Please email us at 123456@qq.com to sign up', noticeSignupZh: '请发邮件至 123456@qq.com 报名。',
+  noticeTail: 'Please arrange your time in advance and attend the activity on time',
+  noticeTailZh: '请各位提前安排好时间，准时参加活动。',
+  minutesOpen: 'The meeting commenced with a warm welcome from the host, followed by an introduction to the purpose of gathering',
+  minutesOpenZh: '主持人首先对大家的到来表示热烈欢迎，随后介绍了会议目的。',
+  minutesAim: 'The meeting aimed to briefly review the activity held last week',
+  minutesAimZh: '本次会议旨在简要回顾上周的活动。',
+  minutesOpinion: 'A detailed presentation was delivered by the speaker, highlighting the mission and achievements of the project',
+  minutesOpinionZh: '发言人做了详细介绍，强调了项目的使命和成就。',
+  minutesAgree: 'The majority of those attendees were in favour of the plan',
+  minutesAgreeZh: '大多数参会人都赞成这一计划。',
+  minutesDecision: 'As a concrete measure, the meeting decided that a follow-up meeting would be arranged',
+  minutesDecisionZh: '作为具体措施，会议决定安排一次后续会议。',
+  minutesNext: 'The date and location of the next meeting will be announced via email to all participants',
+  minutesNextZh: '下次会议的日期和地点将通过邮件通知所有参会者。',
+  minutesDate: 'December 23, 2023', minutesTime: 'From 10:00 a.m. to 11:30 a.m.',
+  minutesLocation: 'A111, conference room', minutesObjective: 'review the activity and plan the next one',
+  minutesAttendees: 'All freshmen', noticeDate: 'December 20, 2025', noticeDateZh: '2025 年 12 月 20 日',
+  c1: 'Firstly,', c1Zh: '首先，',
+  c2: 'Moreover,', c2Zh: '此外，',
+  c3: 'Finally,', c3Zh: '最后，',
+  signOff: 'Yours sincerely,', signOffZh: '此致敬礼',
+  signName: 'Li Ming', signNameZh: '李明'
+};
+
+const P = (id, type, title, year, prompt, promptZh, slots, schemes, extra) =>
+  Object.assign({ id, type, title, year, prompt, promptZh,
+    slots: Object.assign({}, BASE_SLOTS, slots || {}), schemes }, extra || {});
+
+const PRESETS = [
+  P('r2026e1', 'reply', '2026 英一 · 家书展览', '2026 英语一',
+    'Your friend Paul is interested in the Chinese families\u2019 handwritten letters. Write an email to tell him more about these letters and invite him to the exhibition.',
+    '保罗对中国的家书很感兴趣，写信多讲讲这些家书并邀请他来看展览。',
+    {
+      salutation: 'Dear Paul',
+      topic: 'the Chinese families\u2019 handwritten letters',
+      topicZh: '中国的家书',
+      purpose: 'tell you more about these precious letters',
+      purposeZh: '多讲讲这些珍贵的家书',
+      replyOpen: "Thanks for your email. I'm very glad to hear that",
+      replyOpenZh: '谢谢你的来信。很高兴得知',
+      greeting: 'I hope this email finds you well and',
+      greetingZh: '展信佳，并且',
+      c1: 'Firstly,', c1Zh: '首先，',
+      c2: 'Moreover,', c2Zh: '此外，',
+      c3: 'In the end,', c3Zh: '最后，',
+      universal: 'Everyone agrees that the family letter is key to passing down family values and love from generation to generation',
+      universalZh: '大家都认为，家书是家风与亲情代代相传的关键。',
+      universal2: 'These letters provide a unique opportunity to understand the wisdom and expectations of our elders',
+      universal2Zh: '这些家书提供了一个独特的机会，让我们理解长辈的智慧与期望。',
+      universal3: 'I wonder if you can come to the exhibition so that we can enjoy it together',
+      universal3Zh: '我想知道你是否能来参观这个展览，以便我们一起欣赏。',
+      closingEmotion: 'For more information about the activity, please do not hesitate to contact me.',
+      closingEmotionZh: '如需了解更多活动信息，请随时联系我。',
+      expectReply: 'I am looking forward to hearing from you soon.',
+      expectReplyZh: '我期待很快收到你的来信。',
+      signOff: 'Yours sincerely,', signOffZh: '此致敬礼',
+      signName: 'Li Ming', signNameZh: '李明'
+    },
+    { greeting: 'g2', body: 'b6', closing: 'c1', letterhead: 'lh2', signoff: 's1' }),
+
+  P('r2026e2', 'reply', '2026 英二 · 家人旅行视频', '2026 英语二',
+    'Your friend shared a video of his family\u2019s trip in China. Write an email to share your feelings and learn more about the trip.',
+    '朋友分享了家人在中国旅行的视频，写信表达感受并了解更多。',
+    {
+      salutation: 'Dear John',
+      topic: 'the video of your family\u2019s trip in China',
+      topicZh: '你家人中国旅行的视频',
+      purpose: 'share my feelings about the video and learn more about your trip',
+      purposeZh: '分享我对视频的感受，并了解更多你的旅行',
+      replyOpen: 'Thank you for sharing',
+      replyOpenZh: '感谢你分享',
+      greeting: 'It was a great pleasure to receive your email',
+      greetingZh: '收到您的来信，我深感愉快。',
+      c1: 'Firstly,', c1Zh: '首先，',
+      c2: 'Moreover,', c2Zh: '此外，',
+      c3: 'In the end,', c3Zh: '最后，',
+      universal: 'The video allows me to experience the happiness of your family trip',
+      universalZh: '这段视频让我体验到你们家庭旅行的快乐。',
+      universal2: 'It shows not only the beautiful scenery, but also the happy smiles of your family',
+      universal2Zh: '它展示了美丽的风景，还有你们家人开心的笑容。',
+      universal3: 'I wonder if you can tell me more about your trip so that I can visit the same places one day',
+      universal3Zh: '我想知道你是否能告诉我更多旅行的情况，以便我有一天也能去同样的地方。',
+      closingEmotion: 'I hope all the members will enjoy the journey.',
+      closingEmotionZh: '我希望所有成员都能享受这段旅程。',
+      expectReply: 'I am looking forward to hearing from you soon.',
+      expectReplyZh: '我期待很快收到你的来信。',
+      signOff: 'Best regards,', signOffZh: '祝好',
+      signName: 'Li Ming', signNameZh: '李明'
+    },
+    { greeting: 'g1', body: 'b6x', closing: 'c1', letterhead: 'lh2', signoff: 's1' }),
+
+  P('r2025e1', 'reply', '2025 英一 · 创新手工展', '2025 英语一',
+    'Paul is interested in the innovative craft-making exhibition you are going to hold and wants to help. Write an email to reply.',
+    '保罗对你将举办的创新手工展很感兴趣并想帮忙，回信答复。',
+    {
+      salutation: 'Dear Paul',
+      topic: 'the innovative craft-making exhibition',
+      topicZh: '创新手工展',
+      purpose: 'provide further details about the plan',
+      purposeZh: '提供该计划的更多细节',
+      replyOpen: "Thanks for your email. I'm very glad to hear that",
+      replyOpenZh: '谢谢你的来信。很高兴得知',
+      greeting: 'I hope this letter finds you well and',
+      greetingZh: '展信佳，并且',
+      c1: 'Firstly,', c1Zh: '首先，',
+      c2: 'Moreover,', c2Zh: '此外，',
+      c3: 'In the end,', c3Zh: '最后，',
+      infoTime: 'The innovative craft-making exhibition will be held in the student activity center at 8:00 a.m. on Sunday, December 20th',
+      infoTimeZh: '创意手工艺展将于 12 月 20 日周日上午 8 点在学生活动中心举行。',
+      universal: 'The exhibition will feature a keynote speech on craft-making, innovative crafts from all over the world, and a hands-on session',
+      universalZh: '本次展览将以手工制作为主题演讲、世界各地的创新工艺、实践环节为特色。',
+      universal2: 'I wonder if you can arrive at the exhibition area by 7:00 a.m. so that we can assist with the final preparations together',
+      universal2Zh: '不知您能否在上午 7 点前到达展区，以便我们一起协助最后的准备工作。',
+      universal3: 'This activity offers a precious opportunity to broaden your horizons and enrich your campus life',
+      universal3Zh: '这次活动提供了开阔视野、丰富校园生活的宝贵机会。',
+      closingEmotion: 'For more information about the activity, please do not hesitate to contact me.',
+      closingEmotionZh: '如需了解更多活动信息，请随时联系我。',
+      expectReply: 'I would be grateful if you could reply at your earliest convenience.',
+      expectReplyZh: '如果您能在方便时尽快回复，我将不胜感激。',
+      signOff: 'Yours sincerely,', signOffZh: '此致敬礼',
+      signName: 'Li Ming', signNameZh: '李明'
+    },
+    { greeting: 'g1', body: 'b7', closing: 'c1', letterhead: 'lh2', signoff: 's1' }),
+
+  P('r2025e2', 'reply', '2025 英二 · 改编话剧邀演', '2025 英语二',
+    'John is interested in the play you are planning based on a classic Chinese novel. Write an email to introduce the play and invite him to join.',
+    '约翰对你策划的改编自中国古典小说的话剧感兴趣，介绍话剧并邀请他参加。',
+    {
+      salutation: 'Dear John',
+      topic: 'the play based on a classic Chinese novel',
+      topicZh: '改编自中国古典小说的话剧',
+      purpose: 'introduce the play to you',
+      purposeZh: '向你介绍这部话剧',
+      replyOpen: "Thanks for your email. I'm very glad to hear that",
+      replyOpenZh: '谢谢你的来信。很高兴得知',
+      greeting: 'It gives me great pleasure to write to you',
+      greetingZh: '能给您写这封信，我倍感荣幸。',
+      c1: 'Firstly,', c1Zh: '首先，',
+      c2: 'Moreover,', c2Zh: '此外，',
+      c3: 'In the end,', c3Zh: '最后，',
+      universal: 'The short play is adapted from Journey to the West, one of China\u2019s Four Great Classical Novels',
+      universalZh: '这部短剧改编自中国四大古典名著之一《西游记》。',
+      universal2: 'Given your energy and lively personality, you are the perfect choice for the role of the Monkey King',
+      universal2Zh: '鉴于你充沛的精力和活泼的性格，你非常适合出演美猴王这一角色。',
+      universal3: 'Rehearsals will be held on weekends at the student activity center, starting next month',
+      universal3Zh: '排练将于下个月起在学生活动中心的周末举行。',
+      closingEmotion: 'We would appreciate it very much if you could accept our invitation.',
+      closingEmotionZh: '如果您能接受我们的邀请，我们将不胜感激。',
+      expectReply: 'I am looking forward to hearing from you soon.',
+      expectReplyZh: '我期待很快收到你的来信。',
+      signOff: 'Yours sincerely,', signOffZh: '此致敬礼',
+      signName: 'Li Ming', signNameZh: '李明'
+    },
+    { greeting: 'g1', body: 'b6', closing: 'c1', letterhead: 'lh2', signoff: 's1' }),
+
+  P('r2022e1', 'official', '2022 英一 · 邀请教授带队参赛', '2022 英语一',
+    'Write an email to a professor at a British university, inviting him/her to organize a team for the international innovation contest to be held at your university.',
+    '给英国某大学教授写信，邀请他/她带队参加将在你校举办的国家创新大赛。',
+    {
+      salutation: 'Dear Professor',
+      topic: 'the International Innovation Contest',
+      topicZh: '国际创新大赛',
+      purpose: 'invite you to participate in the contest with your team',
+      purposeZh: '诚挚邀请您带领团队参加本次比赛',
+      selfIntro: 'As a student in the Art Department,',
+      selfIntroZh: '作为艺术系的一名学生，',
+      specialOpen: 'It is my honor to inform you that our university will be hosting',
+      specialOpenZh: '我很荣幸地通知您，我校将举办',
+      c1: 'Firstly,', c1Zh: '首先，',
+      c2: 'Moreover,', c2Zh: '此外，',
+      c3: 'In the end,', c3Zh: '最后，',
+      infoTime: 'the contest will be held on the playground in my university at 3:00 p.m. on Sunday, December 31st',
+      infoTimeZh: '比赛将于 12 月 31 日周日下午 3 点在我校操场举行。',
+      infoFlow: 'a series of competitions such as robot competition and aircraft competition will be held to arouse students\u2019 enthusiasm for innovation',
+      infoFlowZh: '将举办机器人比赛、飞机比赛等一系列竞赛，以激发学生的创新热情。',
+      universal: 'The experience will be memorable and our prize will be very valuable',
+      universalZh: '这次经历将是难忘的，我们的奖品将非常有价值。',
+      closingEmotion: 'We hope for your active participation and make this event a grand success.',
+      closingEmotionZh: '我们期待您的积极参与，共同使本次活动取得圆满成功。',
+      expectReply: 'I would be grateful if you could reply at your earliest convenience.',
+      expectReplyZh: '如果您能在方便时尽快回复，我将不胜感激。',
+      signOff: 'Yours sincerely,', signOffZh: '此致敬礼',
+      signName: 'Li Ming', signNameZh: '李明'
+    },
+    { greeting: 'o2', body: 'b1', closing: 'c1', letterhead: 'lh3', signoff: 's1' }),
+
+  P('r2023e2', 'official', '2023 英二 · 给 David 的看展建议', '2023 英语二',
+    'David is choosing between two exhibitions. Write an email to recommend one to him.',
+    'David 在两个展览之间犹豫，写信向他推荐其中一个。',
+    {
+      salutation: 'Dear David',
+      topic: 'the art exhibition',
+      topicZh: '艺术展',
+      purpose: 'recommend the art exhibition to you',
+      purposeZh: '向你推荐这个艺术展',
+      greetPrefix: 'I hope this email finds you well and it is difficult to decide between the two shows.',
+      greetPrefixZh: '展信佳，在这两个展览之间做选择很困难。',
+      c1: 'Firstly,', c1Zh: '首先，',
+      c2: 'What\u2019s more,', c2Zh: '更重要的是，',
+      c3: 'Finally,', c3Zh: '最后，',
+      recommendObject: 'the art exhibition',
+      recommendObjectZh: '这个艺术展',
+      recommendWhy: 'What makes it highly recommendable is the unique experience it offers, which includes an art performance',
+      recommendWhyZh: '它之所以值得高度推荐，在于它提供了独特的观展体验，其中包含艺术表演环节。',
+      universal: 'The art exhibition provides a unique opportunity to let you explore your creativity',
+      universalZh: '艺术展览提供了一个独特的机会，让你探索自己的创造力。',
+      universal2: 'It allows you to experience different cultures and social customs',
+      universal2Zh: '它可以让你接触不同的文化和社会习俗。',
+      universal3: 'What makes it highly recommendable is the unique experience it offers, which includes an art performance',
+      universal3Zh: '它之所以值得高度推荐，在于它提供了独特的观展体验，其中包含艺术表演环节。',
+      closingEmotion: 'I would like to express my gratitude for your kind consideration of my suggestion.',
+      closingEmotionZh: '感谢您考虑我的建议。',
+      expectReply: 'I am looking forward to hearing from you soon.',
+      expectReplyZh: '我期待很快收到你的来信。',
+      signOff: 'Best regards,', signOffZh: '祝好',
+      signName: 'Li Ming', signNameZh: '李明'
+    },
+    { greeting: 'g3', body: 'b6x', closing: 'c1', letterhead: 'lh2', signoff: 's1' }),
+
+  P('r2022e2', 'official', '2022 英二 · 留学生美食节邀请', '2022 英语二',
+    'Suppose you are planning a campus food festival. Write an email to the international students in your university: 1) introduce the food festival; 2) invite them to participate.',
+    '你正在策划校园美食节，给留学生写信介绍并邀请他们参加。',
+    {
+      salutation: 'Dear Friends',
+      topic: 'the campus food festival',
+      topicZh: '校园美食节',
+      purpose: 'introduce the food festival to you and invite you to participate',
+      purposeZh: '向你介绍美食节并邀请你参加',
+      selfIntro: 'As a member of the Student Union,',
+      selfIntroZh: '作为学生会的一员，',
+      c1: 'Firstly,', c1Zh: '首先，',
+      c2: 'Moreover,', c2Zh: '此外，',
+      c3: 'In the end,', c3Zh: '最后，',
+      infoTime: 'the food festival is scheduled to be held on the playground on Friday from 5:00 p.m. to 7:00 p.m',
+      infoTimeZh: '美食节计划于周五下午 5 点到 7 点在操场举行。',
+      infoFlow: 'a series of interesting activities such as cooking contests and food shows will be held to arouse students\u2019 enthusiasm',
+      infoFlowZh: '将举办烹饪比赛、美食表演等一系列有趣活动，以激发学生的热情。',
+      universal: 'The food festival allows you to experience different food cultures and social customs',
+      universalZh: '美食节能让你接触不同的美食文化和社会风俗。',
+      universal2: 'Students of all grades are eligible to take part in the festival, including both domestic and international students',
+      universal2Zh: '所有年级的学生都有资格参加美食节，包括国内和国际学生。',
+      closingEmotion: 'We hope for your active participation and make this event a grand success.',
+      closingEmotionZh: '我们期待您的积极参与，共同使本次活动取得圆满成功。',
+      expectReply: 'I am looking forward to hearing from you soon.',
+      expectReplyZh: '我期待很快收到你的来信。',
+      signOff: 'Yours sincerely,', signOffZh: '此致敬礼',
+      signName: 'Zhang Wei', signNameZh: '张伟'
+    },
+    { greeting: 'o1', body: 'b1', closing: 'c1', letterhead: 'lh4', signoff: 's1' }),
+
+  P('r2020e1', 'notice', '2020 英一 · 歌唱比赛通知', '2020 英语一',
+    'Write a notice for the singing contest to be held on campus.',
+    '为校园歌唱比赛写一则通知。',
+    {
+      salutation: '',
+      topic: 'the singing contest',
+      topicZh: '歌唱比赛',
+      noticeOpen: 'It is a pleasure to inform everyone that a singing contest will be held in our university',
+      noticeOpenZh: '很高兴地通知大家，我校将举办一场歌唱比赛。',
+      noticePurpose: 'The relevant matters are hereby notified as follows',
+      noticePurposeZh: '现将相关事宜通知如下。',
+      c1: 'First and foremost,', c1Zh: '首要的是，',
+      c2: 'In addition,', c2Zh: '此外，',
+      c3: 'In the end,', c3Zh: '最后，',
+      infoTime: 'the singing contest is to be held on the playground at 7:00 p.m. on Sunday, December 31st',
+      infoTimeZh: '歌唱比赛将于 12 月 31 日周日晚上 7 点在操场举行。',
+      infoTheme: 'the purpose of the singing contest is to celebrate the upcoming New Year',
+      infoThemeZh: '举办歌唱比赛的目的是庆祝即将到来的新年。',
+      infoPeople: 'Students of all grades are eligible to enter the singing competition, including domestic and international students',
+      infoPeopleZh: '所有年级的学生都有资格参加歌唱比赛，包括国内和国际学生。',
+      noticeSignup: 'Please email us at 123456@qq.com to sign up',
+      noticeSignupZh: '请发邮件至 123456@qq.com 报名。',
+      noticeTail: 'Please arrange your time in advance and attend the activity on time',
+      noticeTailZh: '请各位提前安排好时间，准时参加活动。'
+    },
+    { notice: 'n1', body: 'b1', noticeEnd: 'ne1', letterhead: 'lh4', signoff: 's1' }),
+
+  P('r2023e1', 'notice', '2023 英一 · 招募体育调研助手', '2023 英语一',
+    'Write a notice to recruit assistants for Prof. Smith\u2019s research on students\u2019 sports activities on campus.',
+    '写一则通知，为 Smith 教授关于校园体育活动的调研招募助手。',
+    {
+      salutation: '',
+      topic: 'the research project',
+      topicZh: '这项调研项目',
+      noticeOpen: 'We are pleased to announce that a research project will be carried out in our university',
+      noticeOpenZh: '我们很高兴宣布，我校将开展一项调研项目。',
+      noticePurpose: 'This notice is intended to introduce some details of this project',
+      noticePurposeZh: '本通知旨在介绍本项目的一些细节。',
+      c1: 'To begin with,', c1Zh: '首先，',
+      c2: 'Secondly,', c2Zh: '其次，',
+      c3: 'Last but not least,', c3Zh: '最后但同样重要的是，',
+      requirement: 'the selected candidates will assist in Prof. Smith\u2019s conducting surveys, collecting and analyzing data on students\u2019 sports activities on campus',
+      requirementZh: '被选中的候选人将协助 Smith 教授进行调查，收集和分析学生校园体育活动数据。',
+      requirement2: 'the candidates should be enthusiastic about sports and have sound organization, communication and planning skills.',
+      requirement2Zh: '候选人应热衷于体育运动，并具备良好的组织、沟通和策划能力。',
+      universal: 'This project will allow you to contribute to the development of campus sports while gaining valuable experience in research',
+      universalZh: '这个项目将使你能够为校园体育发展做出贡献，同时获得宝贵的研究经验。',
+      noticeSignup: 'If you are interested, please email us at 123456@qq.com to apply',
+      noticeSignupZh: '如果你感兴趣，请发邮件至 123456@qq.com 申请。',
+      noticeTail: 'We look forward to your active participation',
+      noticeTailZh: '我们期待你的积极参与。'
+    },
+    { notice: 'n1', body: 'b4', noticeEnd: 'ne1', letterhead: 'lh4', signoff: 's1' }),
+
+  P('r2019e1', 'reply', '2019 英一 · 乡村小学援助答复', '2019 英语一',
+    'Write an email to reply to a friend who asked about the \u201cAiding Rural Primary School\u201d project and to invite him to contribute.',
+    '回复朋友关于“帮扶农村小学”项目的询问，并邀请他参与。',
+    {
+      salutation: 'Dear John',
+      topic: 'the \u201cAiding Rural Primary School\u201d project',
+      topicZh: '“帮扶农村小学”项目',
+      purpose: 'answer your questions about the project',
+      purposeZh: '回答你关于该项目的问题',
+      replyOpen: "Thanks for your email. I'm very glad to hear that",
+      replyOpenZh: '谢谢你的来信。很高兴得知',
+      greeting: 'I hope this email finds you well and',
+      greetingZh: '展信佳，并且',
+      c1: 'First and foremost,', c1Zh: '首要的是，',
+      c2: 'Undoubtedly,', c2Zh: '毫无疑问，',
+      c3: 'In the end,', c3Zh: '最后，',
+      universal: 'the purpose of the project is to provide a platform for people who want to spread love',
+      universalZh: '该项目的目的是为想要传播爱心的人提供一个平台。',
+      universal2: 'students in rural primary schools are badly in need of assistance, which can help them receive a good education',
+      universal2Zh: '农村小学的学生非常需要帮助，这能帮助他们接受良好的教育。',
+      universal3: 'I wonder if you could contribute by teaching English so that they would benefit significantly from your instruction',
+      universal3Zh: '我想知道你是否可以教他们英语，这样他们就能在你的指导下收获颇丰。',
+      closingEmotion: 'For more information about the activity, please do not hesitate to contact me.',
+      closingEmotionZh: '如需了解更多活动信息，请随时联系我。',
+      expectReply: 'I am looking forward to hearing from you soon.',
+      expectReplyZh: '我期待很快收到你的来信。',
+      signOff: 'Yours sincerely,', signOffZh: '此致敬礼',
+      signName: 'Li Ming', signNameZh: '李明'
+    },
+    { greeting: 'g1', body: 'b6', closing: 'c1', letterhead: 'lh2', signoff: 's1' }),
+
+  P('r2007', 'official', '2007 · 给图书馆的建议（投诉）', '2007',
+    'Write a letter to the library to make suggestions about its service.',
+    '给图书馆写信，就服务提出建议（含投诉）。',
+    {
+      salutation: 'Dear Manager',
+      topic: 'the library service',
+      topicZh: '图书馆服务',
+      purpose: 'make several suggestions about the library service',
+      purposeZh: '就图书馆服务提几点建议',
+      selfIntro: 'As a regular reader of your library,',
+      selfIntroZh: '作为贵馆的常驻读者，',
+      c1: 'In the first place,', c1Zh: '第一，',
+      c2: 'In the second place,', c2Zh: '第二，',
+      c3: 'In the third place,', c3Zh: '第三，',
+      universal: 'we are badly in need of updating the database, which can help us acquire the latest knowledge',
+      universalZh: '我们迫切需要更新数据库，它可以帮助我们获得最新的知识。',
+      universal2: 'due to the noisy environment, it\u2019s impossible for us to study effectively',
+      universal2Zh: '由于环境嘈杂，我们不可能有效地学习。',
+      universal3: 'I wonder if the library can extend the opening hours so that we can have more hours to study',
+      universal3Zh: '我想知道图书馆是否可以延长开放时间，这样我们就有更多时间学习。',
+      closingEmotion: 'I would like to express my gratitude for your kind consideration of my suggestion.',
+      closingEmotionZh: '感谢您考虑我的建议。',
+      expectReply: 'I would be grateful if you could reply at your earliest convenience.',
+      expectReplyZh: '如果您能在方便时尽快回复，我将不胜感激。',
+      signOff: 'Yours sincerely,', signOffZh: '此致敬礼',
+      signName: 'Li Ming', signNameZh: '李明'
+    },
+    { greeting: 'g3', body: 'b6x', closing: 'c1', letterhead: 'lh3', signoff: 's1' }),
+
+  P('r2010e2', 'reply', '2010 英二 · 感谢美国同事并邀访华', '2010 英语二',
+    'You have just come back from a cultural exchange program in the US. Write a letter to thank your American colleague and invite him to visit China.',
+    '你刚从美国文化交流项目回国，写信感谢美国同事并邀请他来中国。',
+    {
+      salutation: 'Dear Mr. Smith',
+      topic: 'the cultural exchange program',
+      topicZh: '文化交流项目',
+      purpose: 'express my gratitude for your help',
+      purposeZh: '感谢你的帮助',
+      replyOpen: 'I was delighted to receive your email about',
+      replyOpenZh: '很高兴收到你关于…的来信',
+      greeting: 'I hope this letter finds you well and',
+      greetingZh: '展信佳，并且',
+      c1: 'First of all,', c1Zh: '首先，',
+      c2: 'Moreover,', c2Zh: '此外，',
+      c3: 'Finally,', c3Zh: '最后，',
+      gratitude: 'I am extremely grateful to you for your unselfish assistance during the period of the cultural exchange program',
+      gratitudeZh: '我非常感谢你在文化交流项目期间给我的无私帮助。',
+      gratitude2: 'Without your generous help, I would not have had such a wonderful experience',
+      gratitude2Zh: '如果没有你的慷慨帮助，我不会拥有如此美妙的经历。',
+      universal3: 'I wonder if you can visit my country in due course so that you can experience the charm of traditional Chinese culture',
+      universal3Zh: '我想知道你是否有时间来我们国家游玩，体验中国传统文化的魅力。',
+      closingEmotion: 'Please give my best regards to your family.',
+      closingEmotionZh: '请代我向你的家人问好。',
+      expectReply: 'I am looking forward to hearing from you soon.',
+      expectReplyZh: '我期待很快收到你的来信。',
+      signOff: 'Yours sincerely,', signOffZh: '此致敬礼',
+      signName: 'Li Ming', signNameZh: '李明'
+    },
+    { greeting: 'g1', body: 'b5', closing: 'c2', letterhead: 'lh1', signoff: 's1' }),
+
+  P('r2024e1', 'reply', '2024 英一 · 帮朋友准备演讲', '2024 英语一',
+    'Your friend is preparing a presentation about a scientist. Write an email to give him some advice.',
+    '朋友正在准备关于一位科学家的演讲，写信给他一些建议。',
+    {
+      salutation: 'Dear Paul',
+      topic: 'your presentation about the scientist',
+      topicZh: '你关于这位科学家的演讲',
+      purpose: 'make several suggestions about your presentation',
+      purposeZh: '就你的演讲提几点建议',
+      replyOpen: "Thanks for your email. I'm very glad to hear that",
+      replyOpenZh: '谢谢你的来信。很高兴得知',
+      greeting: 'I hope this email finds you well and',
+      greetingZh: '展信佳，并且',
+      c1: 'In the first place,', c1Zh: '第一，',
+      c2: 'Additionally,', c2Zh: '此外，',
+      c3: 'In the third place,', c3Zh: '第三，',
+      universal: 'you are badly in need of doing some research to gather detailed information, which can help you learn about their life, achievements, and contributions',
+      universalZh: '你非常需要做一些研究来收集详细信息，这能帮助你了解他们的生活、成就和贡献。',
+      universal2: 'you could have more opportunities to catch your audience\u2019s attention if you include some interesting stories or examples related to the scientist',
+      universal2Zh: '如果你能加入一些与这位科学家有关的有趣故事或例子，你会有更多机会吸引听众的注意力。',
+      universal3: 'I wonder if you can share your draft with me so that I can offer you some specific advice',
+      universal3Zh: '我想知道你能否把草稿发给我，这样我就能给你提供一些具体的建议。',
+      closingEmotion: 'I would like to express my gratitude for your kind consideration of my suggestion.',
+      closingEmotionZh: '感谢你考虑我的建议。',
+      expectReply: 'I am looking forward to hearing from you soon.',
+      expectReplyZh: '我期待很快收到你的来信。',
+      signOff: 'Best regards,', signOffZh: '祝好',
+      signName: 'Li Ming', signNameZh: '李明'
+    },
+    { greeting: 'g1', body: 'b6', closing: 'c1', letterhead: 'lh2', signoff: 's1' }),
+
+  P('r2024e2', 'official', '2024 英二 · 宏村调研建议', '2024 英语二',
+    'Your friend is going to Hong village for a survey on ancient building preservation. Write an email to give suggestions.',
+    '朋友要去宏村做古建筑保护调研，写信给出建议。',
+    {
+      salutation: 'Dear David',
+      topic: 'the survey on ancient building preservation',
+      topicZh: '古建筑保护调研',
+      purpose: 'make several suggestions about your survey',
+      purposeZh: '就你的调研提几点建议',
+      selfIntro: 'As your friend,',
+      selfIntroZh: '作为你的朋友，',
+      c1: 'In the first place,', c1Zh: '第一，',
+      c2: 'After that,', c2Zh: '在此之后，',
+      c3: 'Finally,', c3Zh: '最后，',
+      universal: 'Located in Anhui, Hong village is one of the most popular scenic spots in China',
+      universalZh: '位于安徽的宏村是中国最受欢迎的景点之一。',
+      universal2: 'we are badly in need of doing some research to gather detailed information, which can help us acquire official data and policies',
+      universal2Zh: '我们迫切需要做一些研究来收集详细信息，这可以帮助我们获得官方数据和政策。',
+      universal3: 'I am confident that by interviewing the residents we will not only understand the needs of preserving ancient buildings, but also obtain valuable insights',
+      universal3Zh: '我相信通过采访当地居民，我们不仅能了解保护古建筑的需求，还能获得宝贵的见解。',
+      closingEmotion: 'I would like to express my gratitude for your kind consideration of my suggestion.',
+      closingEmotionZh: '感谢你考虑我的建议。',
+      expectReply: 'I am looking forward to hearing from you soon.',
+      expectReplyZh: '我期待很快收到你的来信。',
+      signOff: 'Best regards,', signOffZh: '祝好',
+      signName: 'Li Ming', signNameZh: '李明'
+    },
+    { greeting: 'g3', body: 'b6x', closing: 'c1', letterhead: 'lh2', signoff: 's1' }),
+
+  P('rminutes', 'minutes', '纪要示例 · 活动总结会', '纪要样例',
+    'Write the minutes of a meeting held to review last week\u2019s campus activity and plan the next one.',
+    '为回顾上周校园活动并规划下次活动的会议写一份纪要。',
+    {
+      salutation: '',
+      topic: 'the campus activity',
+      topicZh: '校园活动',
+      minutesDate: 'December 23, 2023',
+      minutesTime: 'From 10:00 a.m. to 11:30 a.m.',
+      minutesLocation: 'A111, conference room',
+      minutesObjective: 'review the activity and plan the next one',
+      minutesAttendees: 'All freshmen',
+      minutesOpen: 'The meeting commenced with a warm welcome from the host, followed by an introduction to the purpose of gathering',
+      minutesOpenZh: '主持人首先对大家的到来表示热烈欢迎，随后介绍了会议目的。',
+      minutesAim: 'The meeting aimed to briefly review the activity held last week',
+      minutesAimZh: '本次会议旨在简要回顾上周的活动。',
+      minutesOpinion: 'A detailed presentation was delivered by the speaker, highlighting the mission, vision, and achievements of the project',
+      minutesOpinionZh: '发言人做了详细介绍，强调了项目的使命、愿景和成就。',
+      minutesAgree: 'Participants engaged in an interactive discussion to address the challenges they faced during the activity',
+      minutesAgreeZh: '参会人进行了互动讨论，以解决活动中面临的挑战。',
+      minutesDecision: 'As a concrete measure, the meeting decided that a follow-up meeting would be arranged',
+      minutesDecisionZh: '作为具体措施，会议决定安排一次后续会议。',
+      minutesNext: 'The date and location of the next meeting will be announced via email to all participants',
+      minutesNextZh: '下次会议的日期和地点将通过邮件通知所有参会者。',
+      signName: 'Li Ming', signNameZh: '李明'
+    },
+    { minutes: 'm1', body: 'b7', letterhead: 'lh4', signoff: 's1' }),
+
+  P('rblank', 'official', '空白模板 · 自己填', '自定义',
+    '把题干信息逐项填进槽位：称呼、主题、意图、三点内容、收尾。',
+    '所有槽位留空，点开每个【标签】选词或手输题干词。',
+    {
+      salutation: 'Dear Sir or Madam',
+      topic: '', topicZh: '',
+      purpose: '', purposeZh: '',
+      selfIntro: 'As a student in the Art Department,',
+      selfIntroZh: '作为艺术系的一名学生，',
+      c1: 'Firstly,', c1Zh: '首先，',
+      c2: 'Moreover,', c2Zh: '此外，',
+      c3: 'Finally,', c3Zh: '最后，',
+      universal: '', universalZh: '',
+      universal2: '', universal2Zh: '',
+      universal3: '', universal3Zh: '',
+      closingEmotion: '', closingEmotionZh: '',
+      expectReply: 'I am looking forward to hearing from you soon.',
+      expectReplyZh: '我期待很快收到你的来信。',
+      signOff: 'Yours sincerely,', signOffZh: '此致敬礼',
+      signName: 'Li Ming', signNameZh: '李明'
+    },
+    { greeting: 'g3', body: 'b6', closing: 'c1', letterhead: 'lh4', signoff: 's1' })
+];
+
+/* ============================================================
+   槽位元数据：哪些槽位挂在哪个 bank 上
+   ============================================================ */
+
+const SLOT_BANKS = {
+  salutation: 'salutation',
+  replyOpen: 'replyOpen', replyOpenZh: 'replyOpen',
+  greeting: 'greeting', greetingZh: 'greeting',
+  purpose: 'purpose', purposeZh: 'purpose',
+  selfIntro: 'selfIntro', selfIntroZh: 'selfIntro',
+  specialOpen: 'specialOpen', specialOpenZh: 'specialOpen',
+  transition: 'transition', transitionZh: 'transition',
+  infoTime: 'infoTime', infoTimeZh: 'infoTime',
+  infoTheme: 'infoTheme', infoThemeZh: 'infoTheme',
+  infoPeople: 'infoPeople', infoPeopleZh: 'infoPeople',
+  infoFlow: 'infoFlow', infoFlowZh: 'infoFlow',
+  infoReward: 'infoReward', infoRewardZh: 'infoReward',
+  recommendObject: 'recommendObject', recommendObjectZh: 'recommendObject',
+  recommendWhy: 'recommendWhy', recommendWhyZh: 'recommendWhy',
+  ability: 'ability', abilityZh: 'ability',
+  requirement: 'requirement', requirementZh: 'requirement',
+  gratitude: 'gratitude', gratitudeZh: 'gratitude',
+  apologyMakeup: 'apologyMakeup', apologyMakeupZh: 'apologyMakeup',
+  universal: 'universal', universalZh: 'universal',
+  universal2: 'universal', universal2Zh: 'universal',
+  universal3: 'universal', universal3Zh: 'universal',
+  closingEmotion: 'closingEmotion', closingEmotionZh: 'closingEmotion',
+  familyRegards: 'familyRegards', familyRegardsZh: 'familyRegards',
+  expectReply: 'expectReply', expectReplyZh: 'expectReply',
+  noticeOpen: 'noticeOpen', noticeOpenZh: 'noticeOpen',
+  noticePurpose: 'noticePurpose', noticePurposeZh: 'noticePurpose',
+  noticeSignup: 'noticeSignup', noticeSignupZh: 'noticeSignup',
+  noticeTail: 'noticeTail', noticeTailZh: 'noticeTail',
+  minutesOpen: 'minutesOpen', minutesOpenZh: 'minutesOpen',
+  minutesAim: 'minutesAim', minutesAimZh: 'minutesAim',
+  minutesOpinion: 'minutesOpinion', minutesOpinionZh: 'minutesOpinion',
+  minutesAgree: 'minutesAgree', minutesAgreeZh: 'minutesAgree',
+  minutesDecision: 'minutesDecision', minutesDecisionZh: 'minutesDecision',
+  minutesNext: 'minutesNext', minutesNextZh: 'minutesNext',
+  signOff: 'signOff', signOffZh: 'signOff',
+  signName: 'signName', signNameZh: 'signName',
+  c1: 'connector', c1Zh: 'connector',
+  c2: 'connector', c2Zh: 'connector',
+  c3: 'connector', c3Zh: 'connector',
+  topic: 'topicBank', topicZh: 'topicBank',
+  extra: 'extraBank', extraZh: 'extraBank',
+  need: 'needBank', needZh: 'needBank'
+};
+
+/* 自定义槽位的候选词（题干常见填空） */
+BANKS.topicBank = [
+  O('the exhibition', '展览', '主题'),
+  O('the activity', '活动', '主题'),
+  O('the competition', '比赛', '主题'),
+  O('the project', '项目', '主题'),
+  O('the lecture', '讲座', '主题'),
+  O('the trip', '旅行', '主题'),
+  O('the book', '书籍', '主题'),
+  O('the movie', '电影', '主题'),
+  O('the conference', '会议', '主题'),
+  O('the workshop', '工作坊', '主题')
+];
+BANKS.extraBank = [
+  O('an art performance', '一场艺术表演', '环节'),
+  O('a keynote speech', '一场主题演讲', '环节'),
+  O('a hands-on session', '一个动手环节', '环节'),
+  O('a group discussion', '一次分组讨论', '环节'),
+  O('an award presentation', '一个颁奖环节', '环节'),
+  O('a coffee break', '一次茶歇', '环节'),
+  O('a Q&A session', '一个问答环节', '环节'),
+  O('a networking session', '一个交流环节', '环节')
+];
+BANKS.needBank = [
+  O('some improvements in the service', '服务上的一些改进', '诉求'),
+  O('more detailed information', '更多详细信息', '诉求'),
+  O('your further suggestions', '你进一步的建议', '诉求'),
+  O('a prompt reply', '一个及时的回复', '诉求'),
+  O('your kind assistance', '你的热心帮助', '诉求'),
+  O('more specific details', '更具体的细节', '诉求')
+];
+
+const SLOT_LABELS = {
+  salutation: '称呼', topic: '主题词', topicZh: '主题词·中',
+  purpose: '来信意图', purposeZh: '来信意图·中',
+  replyOpen: '背景提要', replyOpenZh: '背景提要·中',
+  greeting: '寒暄', greetingZh: '寒暄·中',
+  selfIntro: '自我介绍', selfIntroZh: '自我介绍·中',
+  specialOpen: '专用开头', specialOpenZh: '专用开头·中',
+  transition: '过渡句', transitionZh: '过渡句·中',
+  infoTime: '时间地点', infoTimeZh: '时间地点·中',
+  infoTheme: '活动主题', infoThemeZh: '活动主题·中',
+  infoPeople: '参与范围', infoPeopleZh: '参与范围·中',
+  infoFlow: '流程环节', infoFlowZh: '流程环节·中',
+  infoReward: '奖品收获', infoRewardZh: '奖品收获·中',
+  recommendObject: '推荐对象', recommendObjectZh: '推荐对象·中',
+  recommendWhy: '推荐理由', recommendWhyZh: '推荐理由·中',
+  ability: '能力展示', abilityZh: '能力展示·中',
+  requirement: '岗位要求', requirementZh: '岗位要求·中',
+  gratitude: '感谢句', gratitudeZh: '感谢句·中',
+  apologyMakeup: '道歉弥补', apologyMakeupZh: '道歉弥补·中',
+  universal: '万能句 1', universalZh: '万能句 1·中',
+  universal2: '万能句 2', universal2Zh: '万能句 2·中',
+  universal3: '万能句 3', universal3Zh: '万能句 3·中',
+  closingEmotion: '情感句', closingEmotionZh: '情感句·中',
+  familyRegards: '问候家人', familyRegardsZh: '问候家人·中',
+  expectReply: '期待回信', expectReplyZh: '期待回信·中',
+  noticeOpen: '通知概况', noticeOpenZh: '通知概况·中',
+  noticePurpose: '通知目的', noticePurposeZh: '通知目的·中',
+  noticeSignup: '报名方式', noticeSignupZh: '报名方式·中',
+  noticeTail: '秩序提醒', noticeTailZh: '秩序提醒·中',
+  minutesOpen: '会议导入', minutesOpenZh: '会议导入·中',
+  minutesAim: '会议目的', minutesAimZh: '会议目的·中',
+  minutesOpinion: '发言', minutesOpinionZh: '发言·中',
+  minutesAgree: '讨论赞同', minutesAgreeZh: '讨论赞同·中',
+  minutesDecision: '最终决定', minutesDecisionZh: '最终决定·中',
+  minutesNext: '下次会议', minutesNextZh: '下次会议·中',
+  signOff: '落款', signOffZh: '落款·中',
+  signName: '署名', signNameZh: '署名·中',
+  c1: '连接词 1', c1Zh: '连接词 1·中',
+  c2: '连接词 2', c2Zh: '连接词 2·中',
+  c3: '连接词 3', c3Zh: '连接词 3·中',
+  extra: '具体环节', extraZh: '具体环节·中',
+  need: '诉求', needZh: '诉求·中'
+};
+
+/* 复数主语判断：用于主谓一致 */
+const PLURAL_SLOTS = new Set(['infoPeople', 'noticeOpen', 'universal', 'universal2', 'universal3',
+  'requirement2', 'recommendObject']);
+
+const STORAGE_KEY = 'kaoyan-small-essay-builder-v27';
+const UNDO_KEY = 'kaoyan-small-essay-builder-undo-v27';
+const MAX_UNDO = 40;
+
+const $ = sel => document.querySelector(sel);
+const $$ = sel => Array.from(document.querySelectorAll(sel));
+const clone = v => JSON.parse(JSON.stringify(v));
+const escapeHTML = s => String(s == null ? '' : s).replace(/[&<>"']/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]));
+const escapeAttr = s => escapeHTML(s);
+
+const TYPE_MAP = {};
+TYPES.forEach(t => { TYPE_MAP[t.id] = t; });
+const PRESET_MAP = {};
+PRESETS.forEach(p => { PRESET_MAP[p.id] = p; });
+const SCHEME_MAP = {};
+Object.entries(SCHEMES).forEach(([group, obj]) => {
+  SCHEME_MAP[group] = obj;
+});
+
+/* ============================================================
+   状态
+   ============================================================ */
+
+let state = null;
+let undoStack = [];
+let activeSlot = null;
+let activeDrawerTab = 'slot';
+let libraryTab = 'vocab';
+let drawerSearch = '';
+let toastTimer = null;
+
+function storageGet(key, fallback) {
+  try {
+    const raw = localStorage.getItem(key);
+    return raw ? JSON.parse(raw) : fallback;
+  } catch (err) {
+    return fallback;
+  }
+}
+function storageSet(key, value) {
+  try { localStorage.setItem(key, JSON.stringify(value)); } catch (err) { /* file:// 可能拒绝存储 */ }
+}
+
+function stateFromPreset(preset, settingsPreserve = null) {
+  const settings = Object.assign({}, preset.settings || {});
+  if (settingsPreserve) {
+    settings.bilingual = settingsPreserve.bilingual;
+    settings.concise = settingsPreserve.concise;
+  }
+  return {
+    version: 27,
+    type: preset.type,
+    presetId: preset.id,
+    schemes: Object.assign({}, preset.schemes),
+    slots: Object.assign({}, preset.slots),
+    settings: {
+      bilingual: settings.bilingual !== false,
+      concise: !!settings.concise
+    },
+    updatedAt: Date.now()
+  };
+}
+
+function blankState(type) {
+  const preset = PRESETS.find(p => p.type === type) || PRESETS[0];
+  const base = stateFromPreset(preset, state ? state.settings : null);
+  base.presetId = 'custom';
+  Object.keys(base.slots).forEach(key => { base.slots[key] = ''; });
+  return base;
+}
+
+function hydrateState(raw) {
+  if (!raw || !TYPE_MAP[raw.type] || !raw.slots || !raw.schemes) return null;
+  const fresh = stateFromPreset(PRESET_MAP[raw.presetId] || PRESETS.find(p => p.type === raw.type) || PRESETS[0]);
+  return {
+    version: 27,
+    type: raw.type,
+    presetId: PRESET_MAP[raw.presetId] ? raw.presetId : 'custom',
+    schemes: Object.assign(fresh.schemes, raw.schemes || {}),
+    slots: Object.assign(fresh.slots, raw.slots || {}),
+    settings: Object.assign(fresh.settings, raw.settings || {}),
+    updatedAt: Date.now()
+  };
+}
+
+function saveState() {
+  if (!state) return;
+  state.updatedAt = Date.now();
+  storageSet(STORAGE_KEY, state);
+}
+
+function pushUndo(label) {
+  if (!state) return;
+  undoStack.push({ label, at: Date.now(), state: clone(state) });
+  undoStack = undoStack.slice(-MAX_UNDO);
+  storageSet(UNDO_KEY, undoStack);
+}
+
+function restoreUndo() {
+  if (!undoStack.length) {
+    showToast('还没有可撤销的操作');
+    return;
+  }
+  const item = undoStack.pop();
+  state = hydrateState(item.state) || state;
+  saveState();
+  storageSet(UNDO_KEY, undoStack);
+  activeSlot = null;
+  closeSlotDrawer();
+  renderAll();
+  showToast('已撤销：' + (item.label || '上一步'));
+}
+
+function applyPreset(id, options = {}) {
+  const preset = PRESET_MAP[id];
+  if (!preset) return;
+  if (!options.silent) pushUndo('切换真题预设');
+  const preserved = state ? state.settings : null;
+  state = stateFromPreset(preset, preserved);
+  saveState();
+  activeSlot = null;
+  closeSlotDrawer();
+  renderAll();
+  if (!options.silent) showToast('已载入 ' + preset.title);
+}
+
+function applyType(type) {
+  if (!TYPE_MAP[type]) return;
+  pushUndo('切换体裁');
+  const preset = PRESETS.find(p => p.type === type);
+  if (preset) {
+    const preserved = state ? state.settings : null;
+    state = stateFromPreset(preset, preserved);
+  } else {
+    state = blankState(type);
+  }
+  saveState();
+  renderAll();
+}
+
+function clearCurrent() {
+  pushUndo('清空前快照');
+  const preservedSettings = clone(state.settings);
+  const preservedType = state.type;
+  const preservedSchemes = clone(state.schemes);
+  state = blankState(preservedType);
+  state.settings = preservedSettings;
+  state.schemes = preservedSchemes;
+  saveState();
+  renderAll();
+  showToast('已清空槽位，可通过“撤销”恢复');
+}
+
+/* ============================================================
+   模板渲染
+   ============================================================ */
+
+function slotValue(key, lang) {
+  if (!state || !state.slots) return '';
+  const raw = state.slots[key];
+  const value = raw == null ? '' : String(raw);
+  if (value) return value;
+  // 中文槽位缺失时回退到对应英文值，避免出现与英文不符的默认中文
+  if (lang === 'zh' && /Zh$/.test(key)) {
+    const enKey = key.slice(0, -2);
+    const en = state.slots[enKey];
+    if (en) return String(en);
+  }
+  return value;
+}
+function slotLabel(key) {
+  return SLOT_LABELS[key] || key.replace(/Zh$/, '');
+}
+function isPlural(key) {
+  return PLURAL_SLOTS.has(String(key).replace(/Zh$/, ''));
+}
+
+function resolveSlotDisplay(key) {
+  const value = slotValue(key, 'en').trim();
+  const baseKey = String(key).replace(/Zh$/, '');
+  if (value) {
+    return { filled: true, display: value, empty: false };
+  }
+  // 中文槽位为空但存在对应英文值时，沿用英文（已在 slotValue 回退），无需占位符
+  if (/Zh$/.test(key)) {
+    const en = slotValue(baseKey, 'en').trim();
+    if (en) return { filled: true, display: en, empty: false };
+  }
+  return { filled: false, display: '【' + slotLabel(baseKey) + '】', empty: true };
+}
+
+/* 小作文不做动词变形，只处理大小写与空格礼貌 */
+const PROPER_WORDS = new Set(['I', 'English', 'Chinese', 'China', 'Christmas', 'New', 'Year', 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday', 'Prof', 'Professor', 'Mr', 'Ms', 'Mrs', 'Smith', 'Paul', 'John', 'David', 'Li', 'Ming', 'Zhang', 'Wei', 'Journey', 'West', 'Anhui', 'Hong']);
+
+function polishEnglish(text) {
+  return String(text)
+    .replace(/\s+/g, ' ')
+    .replace(/\s+([,.;:!?])/g, '$1')
+    .replace(/\.{2,}/g, '.')
+    .replace(/,+\./g, '.')
+    .replace(/\s+,/g, ',')
+    .replace(/\(\s+/g, '(')
+    .replace(/\s+\)/g, ')')
+    .trim();
+}
+
+function renderRichTemplate(template, lang = 'en') {
+  const tokens = [];
+  let text = String(template || '').replace(/\{\{([^}]+)\}\}/g, (match, expr) => {
+    const parts = expr.split('|').map(s => s.trim());
+    const kind = parts[0];
+    const key = parts[1] || '';
+    if (!key) {
+      const idx = tokens.length;
+      tokens.push({ key: kind, lang });
+      return '\uE200' + idx + '\uE201';
+    }
+    const idx = tokens.length;
+    tokens.push({ key, lang });
+    return '\uE200' + idx + '\uE201';
+  });
+
+  if (lang === 'en') {
+    const trimmed = text.trim();
+    if (/^\uE200\d+\uE201/.test(trimmed)) {
+      const firstIndex = Number(trimmed.match(/^\uE200(\d+)/)[1]);
+      const val = slotValue(tokens[firstIndex].key, 'en').trim();
+      if (val && /^[a-z]/.test(val)) tokens[firstIndex].capitalize = true;
+    }
+  }
+
+  text = lang === 'en' ? polishEnglish(text) : text.replace(/\s+/g, ' ').replace(/\s+([，。；：！？])/g, '$1').replace(/。{2,}/g, '。').replace(/，+/g, '，').trim();
+
+  let html = '';
+  let plain = '';
+  let cursor = 0;
+  const re = /\uE200(\d+)\uE201/g;
+  let m;
+  while ((m = re.exec(text)) !== null) {
+    const before = text.slice(cursor, m.index);
+    html += escapeHTML(before);
+    plain += before;
+    const token = tokens[Number(m[1])];
+    if (!token) { cursor = re.lastIndex; continue; }
+    const info = resolveSlotDisplay(token.key);
+    let display = info.display;
+    if (lang === 'en' && token.capitalize && info.filled && display) {
+      display = display.charAt(0).toUpperCase() + display.slice(1);
+    }
+    // 连接词以逗号结尾时，紧随的槽位首字母应为小写（专有名词白名单除外）
+    if (lang === 'en' && info.filled && display) {
+      const priorPlain = (plain + before).replace(/\s+$/g, '');
+      if (/,$/.test(priorPlain)) {
+        const word = display.match(/^[A-Za-z'-]+/);
+        if (word && !PROPER_WORDS.has(word[0])) {
+          display = display.charAt(0).toLowerCase() + display.slice(1);
+        }
+      }
+    }
+    const slotHtml = '<button type="button" class="slot ' + (info.filled ? 'filled' : 'empty') +
+      '" data-slot="' + escapeAttr(token.key) + '" title="点击换词或手输：' + escapeAttr(slotLabel(token.key)) + '">' +
+      escapeHTML(display) + '</button>';
+    html += slotHtml;
+    plain += display;
+    cursor = re.lastIndex;
+  }
+  const tail = text.slice(cursor);
+  html += escapeHTML(tail);
+  plain += tail;
+  return { html: html.replace(/\s{2,}/g, ' ').trim(), plain: (lang === 'en' ? polishEnglish(plain) : plain.trim()) };
+}
+
+function getScheme(group, key) {
+  const obj = SCHEMES[group];
+  if (!obj) return null;
+  return obj[key] || null;
+}
+
+function schemeLines(group, key) {
+  const sch = getScheme(group, key);
+  if (!sch) return [];
+  return sch.lines.filter(Boolean);
+}
+
+/* ============================================================
+   组装全文
+   ============================================================ */
+
+function buildEssay() {
+  const paragraphs = [];
+  const type = state.type;
+  const s = state.schemes;
+
+  if (type === 'minutes') {
+    // 纪要：头部字段块 + 正文
+    const headLines = [];
+    if (state.slots.minutesDate) headLines.push(L('Date: ' + state.slots.minutesDate, '日期：' + state.slots.minutesDate, '日期'));
+    if (state.slots.minutesTime) headLines.push(L('Time: ' + state.slots.minutesTime, '时间：' + state.slots.minutesTime, '时间'));
+    if (state.slots.minutesLocation) headLines.push(L('Location: ' + state.slots.minutesLocation, '地点：' + state.slots.minutesLocation, '地点'));
+    if (state.slots.minutesObjective) headLines.push(L('Objective: ' + state.slots.minutesObjective, '目的：' + state.slots.minutesObjective, '目的'));
+    if (state.slots.minutesAttendees) headLines.push(L('Attendees: ' + state.slots.minutesAttendees, '参会人：' + state.slots.minutesAttendees, '参会人'));
+    paragraphs.push({ id: 'head', title: '纪要头', subtitle: 'Minutes of Meeting · 固定格式', lines: headLines });
+
+    paragraphs.push({ id: 1, title: '正文 · 上半', subtitle: '导入 + 目的 + 发言', lines: schemeLines('minutes', s.minutes || 'm1') });
+    paragraphs.push({ id: 2, title: '正文 · 下半', subtitle: '讨论 + 决议 + 下次', lines: schemeLines('minutes', s.minutesBody || 'm2') });
+    const minFoot = [L('Recorded by: ' + (state.slots.signName || 'Li Ming'), '记录人：' + (state.slots.signName || '李明'), '记录人')];
+    if (state.slots.minutesDate) minFoot.push(L(state.slots.minutesDate, state.slots.minutesDate, '日期'));
+    paragraphs.push({ id: 'foot', title: '记录人', subtitle: 'Recorded by', lines: minFoot });
+    return paragraphs;
+  }
+
+  if (type === 'notice') {
+    // 通知：Notice 标题 + 第一段 + 第二段 + 第三段 + 署名 + 日期
+    const head = [{ id: 'head', title: '标题', subtitle: 'Notice · 固定格式', lines: [L('Notice', '通知', '标题')] }];
+    paragraphs.push(head[0]);
+    const p1 = schemeLines('notice', s.notice || 'n1');
+    paragraphs.push({ id: 1, title: '第一段', subtitle: '通知概况 + 通知目的', lines: p1 });
+    const p2 = schemeLines('body', s.body || 'b1');
+    paragraphs.push({ id: 2, title: '第二段', subtitle: '具体内容（与书信通用）', lines: p2 });
+    const p3 = schemeLines('noticeEnd', s.noticeEnd || 'ne1');
+    paragraphs.push({ id: 3, title: '第三段', subtitle: '发出邀请 + 报名方式', lines: p3 });
+    paragraphs.push({ id: 'foot', title: '署名与日期', subtitle: '右下角', lines: [
+      L('{{signName}}', '{{signNameZh}}', '署名'),
+      L('{{noticeDate}}', '{{noticeDateZh}}', '日期')
+    ] });
+    return paragraphs;
+  }
+
+  // 书信：称呼 + 第一段 + 第二段 + 第三段 + 落款
+  const lhKey = s.letterhead || (type === 'reply' ? 'lh2' : 'lh3');
+  const lhLines = schemeLines('letterhead', lhKey);
+  paragraphs.push({ id: 'head', title: '称呼', subtitle: '按题干收信人确定', lines: lhLines });
+
+  const greetGroup = type === 'reply' ? 'greeting' : 'official';
+  const p1 = schemeLines(greetGroup, s.greeting || (type === 'reply' ? 'g1' : 'o1'));
+  paragraphs.push({ id: 1, title: '第一段', subtitle: type === 'reply' ? '背景提要 + 来信意图' : '自我介绍 + 来信意图', lines: p1 });
+
+  const p2 = schemeLines('body', s.body || 'b6');
+  paragraphs.push({ id: 2, title: '第二段', subtitle: '核心内容（50 句通用库）', lines: p2 });
+
+  const p3 = schemeLines('closing', s.closing || 'c1');
+  paragraphs.push({ id: 3, title: '第三段', subtitle: '表示情感 + 期待回信', lines: p3 });
+
+  const sf = schemeLines('signoff', s.signoff || 's1');
+  paragraphs.push({ id: 'foot', title: '落款', subtitle: '右下角', lines: sf });
+
+  return paragraphs.filter(p => p.lines.length > 0);
+}
+
+function renderEssayData() {
+  const paragraphs = buildEssay();
+  const usedSlots = new Set();
+  let sentenceNumber = 0;
+  let wordCount = 0;
+  let emptyCount = 0;
+
+  const rendered = paragraphs.map(p => {
+    const lines = p.lines.map(line => {
+      const en = renderRichTemplate(line.en, 'en');
+      const zh = renderRichTemplate(line.zh, 'zh');
+      en.plain.replace(/\uE200\d+\uE201/g, '');
+      wordCount += (en.plain.match(/[A-Za-z][A-Za-z'-]*/g) || []).length;
+      // 统计槽位
+      const re = /data-slot="([^"]+)"/g;
+      let m;
+      while ((m = re.exec(en.html)) !== null) usedSlots.add(m[1]);
+      if (/class="slot empty"/.test(en.html)) emptyCount++;
+      sentenceNumber++;
+      return { label: line.label, en, zh };
+    }).filter(Boolean);
+    return { id: p.id, title: p.title, subtitle: p.subtitle, lines };
+  });
+
+  return { paragraphs: rendered, sentenceNumber, wordCount, emptyCount, usedSlots };
+}
+
+/* ============================================================
+   渲染
+   ============================================================ */
+
+function showToast(msg) {
+  const el = $('#toast');
+  if (!el) return;
+  el.textContent = msg;
+  el.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => el.classList.remove('show'), 2100);
+}
+
+function renderTypeTabs() {
+  const host = $('#type-tabs');
+  if (!host) return;
+  host.innerHTML = TYPES.map(t =>
+    '<button type="button" class="type-tab' + (state.type === t.id ? ' active' : '') + '" data-type="' + t.id + '">' +
+      '<span class="type-icon">' + t.icon + '</span>' +
+      '<span><strong>' + escapeHTML(t.label) + '</strong><small>' + escapeHTML(t.short) + '</small></span>' +
+    '</button>'
+  ).join('');
+}
+
+function renderPresetSelect() {
+  const sel = $('#preset-select');
+  if (!sel) return;
+  const list = PRESETS.filter(p => p.type === state.type);
+  sel.innerHTML = list.map(p =>
+    '<option value="' + p.id + '"' + (state.presetId === p.id ? ' selected' : '') + '>' + escapeHTML(p.title) + '</option>'
+  ).join('') + '<option value="custom"' + (state.presetId === 'custom' ? ' selected' : '') + '>自定义（已改槽位）</option>';
+}
+
+function renderSettings() {
+  const host = $('#mode-toggles');
+  if (!host) return;
+  host.innerHTML = [
+    { key: 'bilingual', label: '中英对照', hint: '关闭后只显示英文' },
+    { key: 'concise', label: '精简模式', hint: '隐藏非核心句' }
+  ].map(item =>
+    '<label class="mode-toggle"><span><strong>' + item.label + '</strong><small>' + item.hint + '</small></span>' +
+    '<input type="checkbox" data-setting="' + item.key + '"' + (state.settings[item.key] ? ' checked' : '') + '><i></i></label>'
+  ).join('');
+}
+
+function controlsForCurrent() {
+  const type = state.type;
+  const s = state.schemes;
+  const groups = [];
+
+  if (type === 'minutes') {
+    groups.push({
+      title: '纪要正文', controls: [
+        { key: 'minutes', scheme: 'minutes', label: '上半：导入与发言', options: Object.keys(SCHEMES.minutes) },
+        { key: 'body', scheme: 'body', label: '中段：核心内容', options: Object.keys(SCHEMES.body) }
+      ]
+    });
+  } else if (type === 'notice') {
+    groups.push({
+      title: '通知段落', controls: [
+        { key: 'notice', scheme: 'notice', label: '第一段', options: Object.keys(SCHEMES.notice) },
+        { key: 'body', scheme: 'body', label: '第二段', options: Object.keys(SCHEMES.body) },
+        { key: 'noticeEnd', scheme: 'noticeEnd', label: '第三段', options: Object.keys(SCHEMES.noticeEnd) }
+      ]
+    });
+  } else {
+    const greetGroup = type === 'reply' ? 'greeting' : 'official';
+    groups.push({
+      title: '书信段落', controls: [
+        { key: 'greeting', scheme: greetGroup, label: '第一段', options: Object.keys(SCHEMES[greetGroup]) },
+        { key: 'body', scheme: 'body', label: '第二段', options: Object.keys(SCHEMES.body) },
+        { key: 'closing', scheme: 'closing', label: '第三段', options: Object.keys(SCHEMES.closing) }
+      ]
+    });
+    groups.push({
+      title: '称呼与落款', controls: [
+        { key: 'letterhead', scheme: 'letterhead', label: '称呼', options: Object.keys(SCHEMES.letterhead) },
+        { key: 'signoff', scheme: 'signoff', label: '落款', options: Object.keys(SCHEMES.signoff) }
+      ]
+    });
+  }
+  return groups;
+}
+
+function renderControlPanel() {
+  const host = $('#control-panel');
+  if (!host) return;
+  const groups = controlsForCurrent();
+  host.innerHTML = groups.map(g =>
+    '<details class="control-group" open><summary><span>' + escapeHTML(g.title) + '</span><small>' + g.controls.length + ' 项</small></summary>' +
+    '<div class="control-body">' + g.controls.map(c => {
+      const sch = SCHEMES[c.scheme];
+      const current = state.schemes[c.key] || Object.keys(sch)[0];
+      return '<div class="control-row" data-control-key="' + c.key + '">' +
+        '<span class="control-label">' + escapeHTML(c.label) + '</span>' +
+        '<select data-scheme-key="' + c.key + '">' +
+        Object.entries(sch).map(([k, v]) =>
+          '<option value="' + k + '"' + (current === k ? ' selected' : '') + '>' + escapeHTML(v.label) + '</option>'
+        ).join('') +
+        '</select>' +
+        '<span class="control-note">' + escapeHTML((sch[current] || {}).note || '') + '</span>' +
+      '</div>';
+    }).join('') + '</div></details>'
+  ).join('');
+}
+
+function renderPromptCard() {
+  const host = $('#prompt-card');
+  if (!host) return;
+  const preset = PRESET_MAP[state.presetId] || PRESETS.find(p => p.type === state.type) || PRESETS[0];
+  const type = TYPE_MAP[state.type];
+  host.innerHTML =
+    '<div class="prompt-head"><span class="type-chip">' + escapeHTML(type.label) + ' · ' + escapeHTML(type.short) + '</span>' +
+    '<span class="type-chip">' + escapeHTML(preset.year || '') + '</span></div>' +
+    '<h2>' + escapeHTML(preset.title) + '</h2>' +
+    '<p>' + escapeHTML(preset.prompt) + '</p>' +
+    '<p style="margin-top:6px;color:#8a9a93">' + escapeHTML(preset.promptZh) + '</p>' +
+    '<div class="prompt-foot"><span>' + escapeHTML(type.intro) + '</span><span>' + escapeHTML(preset.id) + '</span></div>';
+}
+
+function renderPreview() {
+  const host = $('#essay-preview');
+  if (!host) return;
+  const data = renderEssayData();
+  host.innerHTML = data.paragraphs.map(p =>
+    '<div class="essay-paragraph">' +
+      '<div class="paragraph-heading">' +
+        '<span class="para-index">' + escapeHTML(String(p.id).toUpperCase()) + '</span>' +
+        '<div><h3>' + escapeHTML(p.title) + '</h3><p>' + escapeHTML(p.subtitle) + '</p></div>' +
+        '<span class="sentence-count">' + p.lines.length + ' 句</span>' +
+      '</div>' +
+      '<div class="sentence-list">' + p.lines.map(line =>
+        '<div class="sentence-card">' +
+          '<button type="button" class="sentence-label">' + escapeHTML(line.label || '') + '</button>' +
+          '<div class="sentence-body">' +
+            '<span class="line-en">' + line.en.html + '</span>' +
+            '<span class="line-zh">' + line.zh.html + '</span>' +
+          '</div>' +
+        '</div>'
+      ).join('') + '</div>' +
+    '</div>'
+  ).join('');
+
+  const meta = $('#memo-meta');
+  if (meta) meta.textContent = data.sentenceNumber + ' sentences · ' + data.wordCount + ' words';
+}
+
+function renderCoach() {
+  const host = $('#coach-panel');
+  if (!host) return;
+  const data = renderEssayData();
+  const total = data.usedSlots.size || 1;
+  const filled = Array.from(data.usedSlots).filter(k => slotValue(k, 'en').trim()).length;
+  const pct = Math.round((filled / total) * 100);
+
+  host.innerHTML =
+    '<div class="coach-block"><span class="eyebrow">WORD BUDGET</span>' +
+      '<div class="completion-head"><strong>' + data.wordCount + '</strong><span>词 · 目标 100</span></div>' +
+      '<div class="progress-track"><i style="width:' + Math.min(100, pct) + '%"></i></div>' +
+      '<div class="metric-grid">' +
+        '<div><strong>' + filled + '</strong><span>已填槽位</span></div>' +
+        '<div><strong>' + data.emptyCount + '</strong><span>待填句</span></div>' +
+        '<div><strong>' + data.sentenceNumber + '</strong><span>总句数</span></div>' +
+      '</div>' +
+    '</div>' +
+    '<div class="coach-block"><span class="eyebrow">CHECK LIST</span><h3>交卷前检查</h3>' +
+      '<div class="check-list">' +
+        '<span><i class="' + (state.slots.salutation ? '' : 'warn') + '"></i>称呼是否与题干收信人一致</span>' +
+        '<span><i class="' + (state.slots.purpose ? '' : 'warn') + '"></i>第一段是否点明来信意图</span>' +
+        '<span><i class="' + (data.wordCount >= 90 ? '' : 'warn') + '"></i>词数是否接近 100 词</span>' +
+        '<span><i class="' + (state.type === 'reply' || state.slots.selfIntro || state.type === 'notice' || state.type === 'minutes' ? '' : 'warn') + '"></i>公务信是否已自我介绍</span>' +
+        '<span><i class="' + (state.slots.signName ? '' : 'warn') + '"></i>落款是否用 Li Ming</span>' +
+      '</div>' +
+    '</div>' +
+    '<div class="coach-block lecture-note"><span class="eyebrow">LECTURE NOTE</span>' +
+      '<p>小作文难的是中文，不是英文。弱化题型区分，强化功能表达：第一段只换那几个动词，第二段三类体裁共用。</p>' +
+    '</div>' +
+    '<div class="coach-block"><span class="eyebrow">REMINDER</span>' +
+      '<p class="tiny-note">题干里的时间、地点、人物、事件，都要在第二段落到具体信息，不要只写空话。</p>' +
+      '<p class="tiny-note">第二段挑 2~3 句即可，不是越多越好。</p>' +
+    '</div>';
+}
+
+function renderSlotDrawer() {
+  if (!activeSlot) return;
+  const info = resolveSlotDisplay(activeSlot);
+  $('#slot-current').textContent = info.filled ? info.display : '（未填）';
+  $('#slot-title').textContent = slotLabel(activeSlot);
+
+  const bankKey = SLOT_BANKS[activeSlot] || SLOT_BANKS[String(activeSlot).replace(/Zh$/, '')];
+  const list = bankKey && BANKS[bankKey] ? BANKS[bankKey] : [];
+  const filtered = drawerSearch
+    ? list.filter(o => (o.v + o.cn + o.tag).toLowerCase().includes(drawerSearch.toLowerCase()))
+    : list;
+
+  $('#slot-option-count').textContent = String(filtered.length);
+  $('#slot-option-list').innerHTML = filtered.length
+    ? filtered.map((o, i) =>
+        '<button type="button" class="lex-option' + (slotValue(activeSlot, 'en') === o.v ? ' selected' : '') + '" data-bank="' + bankKey + '" data-index="' + list.indexOf(o) + '">' +
+          '<span class="lex-en">' + escapeHTML(o.v) + '</span>' +
+          '<span class="lex-cn">' + escapeHTML(o.cn) + '</span>' +
+          '<span class="lex-tag">' + escapeHTML(o.tag) + '</span>' +
+        '</button>'
+      ).join('')
+    : '<div class="empty-state">' + (bankKey ? '该槽位暂无候选词，可在下方手输。' : '该槽位为自由文本，请直接手输。') + '</div>';
+
+  $('#slot-all-list').innerHTML = Object.entries(BANKS).map(([bk, opts]) =>
+    '<div class="option-group"><div class="option-group-title">' + escapeHTML(bk) + '<span>' + opts.length + '</span></div>' +
+    opts.map(o =>
+      '<button type="button" class="lex-option" data-bank="' + bk + '" data-index="' + opts.indexOf(o) + '">' +
+        '<span class="lex-en">' + escapeHTML(o.v) + '</span>' +
+        '<span class="lex-cn">' + escapeHTML(o.cn) + '</span>' +
+        '<span class="lex-tag">' + escapeHTML(o.tag) + '</span>' +
+      '</button>'
+    ).join('') + '</div>'
+  ).join('');
+
+  $('#slot-bank-panel').hidden = activeDrawerTab !== 'slot';
+  $('#slot-all-panel').hidden = activeDrawerTab !== 'all';
+  $$('.drawer-tab').forEach(t => t.classList.toggle('active', t.dataset.drawerTab === activeDrawerTab));
+}
+
+function renderLibrary() {
+  const host = $('#library-content');
+  if (!host) return;
+
+  if (libraryTab === 'vocab') {
+    host.innerHTML =
+      '<div class="library-intro"><span class="eyebrow">PHRASE BANK</span><h2>短语词库</h2>' +
+      '<p>全部来自讲义。点任意短语可复制；若当前打开了某个槽位，则直接填入该槽位。</p></div>' +
+      Object.entries(BANKS).map(([bk, opts]) =>
+        '<div class="library-bank"><div class="library-bank-head"><h3>' + escapeHTML(bk) + '</h3><span>' + opts.length + ' 条</span></div>' +
+        '<div class="chip-list">' + opts.map(o =>
+          '<button type="button" class="phrase-chip" data-library-bank="' + bk + '" data-index="' + opts.indexOf(o) + '">' +
+            '<strong>' + escapeHTML(o.v || '（空）') + '</strong><small>' + escapeHTML(o.cn) + '</small>' +
+          '</button>'
+        ).join('') + '</div></div>'
+      ).join('');
+    return;
+  }
+
+  if (libraryTab === 'schemes') {
+    host.innerHTML =
+      '<div class="library-intro"><span class="eyebrow">SENTENCE SCHEMES</span><h2>句子方案</h2>' +
+      '<p>每个方案是一整套句子骨架，点一下即可套用到对应段落。</p></div>' +
+      Object.entries(SCHEMES).map(([group, obj]) =>
+        '<details class="library-scheme-group"><summary><span>' + escapeHTML(group) + '</span><small>' + Object.keys(obj).length + ' 个方案</small></summary>' +
+        '<div class="scheme-grid">' + Object.entries(obj).map(([k, v]) =>
+          '<button type="button" class="scheme-card" data-library-scheme-group="' + group + '" data-library-scheme-key="' + k + '">' +
+            '<strong>' + escapeHTML(v.label) + '</strong><span>' + escapeHTML(v.note) + '</span>' +
+          '</button>'
+        ).join('') + '</div></details>'
+      ).join('');
+    return;
+  }
+
+  if (libraryTab === 'notes') {
+    const notes = [
+      ['01', '小作文只分两类：被动写信（答复信，对方认识你）和主动写信（公务信函，对方不一定认识你）。二者仅在称呼和第一段是否需要自我介绍上有区别。'],
+      ['02', '通知＝告示，英文都是 notice。与邀请信相比，仅格式和一三两段不同，第二段完全相同。'],
+      ['03', '纪要是 23 年新增题型，本质上与备忘录相同，还没有考过。格式与通知类似。'],
+      ['04', '第一段区分只是为了方便背那几个动词。一旦给某句话扣上“只能用于某种信”的帽子，使用范围将大大受限。'],
+      ['05', '第二段挑 2~3 句即可。考场上只需要默写 8 句左右。'],
+      ['06', '题干里的时间、地点、人物、事件，必须落到第二段的具体信息里。'],
+      ['07', '落款一般用李明，写在右下角。题目要求 Do not sign your own name 时不要写真名。'],
+      ['08', '英语一英语二小作文无需区分，可相互练习。真题可以反复练。'],
+      ['09', '标题 Notice 居中；日期写在署名下方。纪要要有 Date/Time/Location/Objective/Attendees。'],
+      ['10', '写作思路：用有限的知识解决无限的问题。先练套用，再挑出高频的 20 句背熟。']
+    ];
+    host.innerHTML =
+      '<div class="library-intro"><span class="eyebrow">MARGINALIA</span><h2>注释与提醒</h2>' +
+      '<p>讲义里散落的注意事项，集中放在这里。</p></div>' +
+      '<div class="note-list">' + notes.map(([n, t]) =>
+        '<div class="note-card"><span>' + n + '</span><p>' + escapeHTML(t) + '</p></div>'
+      ).join('') + '</div>';
+    return;
+  }
+
+  // overview
+  host.innerHTML =
+    '<div class="library-intro"><span class="eyebrow">GENRE MAP</span><h2>体裁地图 / 预设</h2>' +
+    '<p>左列是四类体裁的分工，下方是全部真题预设，点一下直接载入。</p></div>' +
+    '<div class="exam-table">' + TYPES.map(t =>
+      '<div><strong>' + escapeHTML(t.label) + '</strong><span>' + escapeHTML(t.short) + '</span><p>' + escapeHTML(t.intro) + '</p></div>'
+    ).join('') + '</div>' +
+    '<div class="preset-grid">' + PRESETS.map(p =>
+      '<button type="button" class="preset-card" data-library-preset="' + p.id + '">' +
+        '<strong>' + escapeHTML(p.title) + '</strong>' +
+        '<small>' + escapeHTML(p.year || '') + ' · ' + escapeHTML(TYPE_MAP[p.type].label) + '</small>' +
+        '<p>' + escapeHTML(p.promptZh) + '</p>' +
+      '</button>'
+    ).join('') + '</div>';
+}
+
+function renderAll() {
+  if (!state) return;
+  document.body.classList.toggle('zh-off', !state.settings.bilingual);
+  renderTypeTabs();
+  renderPresetSelect();
+  renderSettings();
+  renderControlPanel();
+  renderPromptCard();
+  renderPreview();
+  renderCoach();
+  if (activeSlot) renderSlotDrawer();
+  if ($('#library-modal').classList.contains('open')) renderLibrary();
+}
+
+/* ============================================================
+   交互
+   ============================================================ */
+
+function openSlotDrawer(key) {
+  activeSlot = key;
+  activeDrawerTab = 'slot';
+  drawerSearch = '';
+  const input = $('#slot-search');
+  if (input) input.value = '';
+  $('#slot-drawer').classList.add('open');
+  $('#slot-drawer').setAttribute('aria-hidden', 'false');
+  $('#drawer-overlay').classList.add('open');
+  renderSlotDrawer();
+}
+function closeSlotDrawer() {
+  activeSlot = null;
+  $('#slot-drawer').classList.remove('open');
+  $('#slot-drawer').setAttribute('aria-hidden', 'true');
+  $('#drawer-overlay').classList.remove('open');
+}
+function openLibrary() {
+  $('#library-modal').classList.add('open');
+  $('#library-modal').setAttribute('aria-hidden', 'false');
+  renderLibrary();
+}
+function closeLibrary() {
+  $('#library-modal').classList.remove('open');
+  $('#library-modal').setAttribute('aria-hidden', 'true');
+}
+
+function setSlot(key, value) {
+  if (!state) return;
+  pushUndo('修改槽位：' + slotLabel(key));
+  state.slots[key] = value;
+  if (key === 'topic') state.slots.topicZh = state.slots.topicZh || '';
+  saveState();
+  renderAll();
+  showToast(value ? '已填入' : '已清空');
+}
+
+function setSlotFromBank(bankKey, index) {
+  const opt = (BANKS[bankKey] || [])[index];
+  if (!opt || !activeSlot) return;
+  pushUndo('选词：' + slotLabel(activeSlot));
+  state.slots[activeSlot] = opt.v;
+  // 中文槽位同步：若是 Zh 槽位，写中文
+  if (/Zh$/.test(activeSlot)) {
+    state.slots[activeSlot] = opt.cn === '（空）' ? '' : opt.v;
+    state.slots[activeSlot] = opt.v;
+  }
+  // 若英文槽位，尝试同步对应中文槽位
+  const zhKey = activeSlot + 'Zh';
+  if (!/Zh$/.test(activeSlot) && Object.prototype.hasOwnProperty.call(state.slots, zhKey)) {
+    state.slots[zhKey] = opt.cn;
+  }
+  saveState();
+  renderAll();
+  renderSlotDrawer();
+  showToast('已填入');
+}
+
+function setScheme(key, value) {
+  if (!state || state.schemes[key] === value) return;
+  pushUndo('切换句子方案');
+  state.schemes[key] = value;
+  saveState();
+  renderAll();
+}
+
+function setSetting(key, value) {
+  pushUndo('切换模式');
+  state.settings[key] = Boolean(value);
+  saveState();
+  renderAll();
+}
+
+function copyEssay() {
+  const data = renderEssayData();
+  const parts = [];
+  data.paragraphs.forEach(p => {
+    p.lines.forEach(line => {
+      const en = line.en.plain.trim();
+      const zh = line.zh.plain.trim();
+      if (en) parts.push(en);
+      if (state.settings.bilingual && zh && zh !== en) parts.push(zh);
+    });
+    parts.push('');
+  });
+  const text = parts.join('\n').replace(/\n{3,}/g, '\n\n').trim();
+
+  const fallback = () => {
+    const area = $('#copy-fallback-text');
+    if (area) {
+      area.value = text;
+      $('#copy-modal').classList.add('open');
+      $('#copy-modal').setAttribute('aria-hidden', 'false');
+      area.focus();
+      area.select();
+    }
+  };
+
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(() => showToast('全文已复制')).catch(fallback);
+  } else {
+    fallback();
+  }
+}
+
+function bindEvents() {
+  document.addEventListener('click', event => {
+    const typeBtn = event.target.closest('[data-type]');
+    if (typeBtn) { applyType(typeBtn.dataset.type); return; }
+    if (event.target.closest('#undo-btn')) { restoreUndo(); return; }
+    if (event.target.closest('#clear-btn')) { clearCurrent(); return; }
+    if (event.target.closest('#copy-btn')) { copyEssay(); return; }
+    if (event.target.closest('#library-open')) { openLibrary(); return; }
+    if (event.target.closest('#library-help')) { libraryTab = 'overview'; openLibrary(); return; }
+    if (event.target.closest('#library-close') || event.target.id === 'library-modal') { closeLibrary(); return; }
+    if (event.target.closest('#drawer-close') || event.target.closest('#drawer-overlay')) { closeSlotDrawer(); return; }
+    if (event.target.closest('#copy-modal-close') || event.target.closest('#copy-modal-close-bottom') || event.target.id === 'copy-modal') {
+      $('#copy-modal').classList.remove('open');
+      $('#copy-modal').setAttribute('aria-hidden', 'true');
+      return;
+    }
+    if (event.target.closest('#copy-select-again')) {
+      const area = $('#copy-fallback-text');
+      if (area) { area.focus(); area.select(); }
+      return;
+    }
+
+    const libraryTabBtn = event.target.closest('.library-tab');
+    if (libraryTabBtn) { libraryTab = libraryTabBtn.dataset.libraryTab; renderLibrary(); return; }
+
+    const drawerTabBtn = event.target.closest('.drawer-tab');
+    if (drawerTabBtn) { activeDrawerTab = drawerTabBtn.dataset.drawerTab; renderSlotDrawer(); return; }
+
+    const slotBtn = event.target.closest('[data-slot]');
+    if (slotBtn && slotBtn.closest('#essay-preview')) { openSlotDrawer(slotBtn.dataset.slot); return; }
+
+    const lexBtn = event.target.closest('.lex-option');
+    if (lexBtn) { setSlotFromBank(lexBtn.dataset.bank, Number(lexBtn.dataset.index)); return; }
+
+    if (event.target.closest('#manual-apply')) {
+      const input = $('#manual-slot-input');
+      if (input && activeSlot) setSlot(activeSlot, input.value);
+      return;
+    }
+    if (event.target.closest('#slot-clear')) {
+      if (activeSlot) setSlot(activeSlot, '');
+      return;
+    }
+
+    const labelBtn = event.target.closest('.sentence-label');
+    if (labelBtn) { $('#control-panel').scrollIntoView({ behavior: 'smooth', block: 'start' }); return; }
+
+    const phraseChip = event.target.closest('.phrase-chip');
+    if (phraseChip) {
+      const bankKey = phraseChip.dataset.libraryBank;
+      const opt = (BANKS[bankKey] || [])[Number(phraseChip.dataset.index)];
+      if (!opt) return;
+      if (activeSlot) setSlotFromBank(bankKey, Number(phraseChip.dataset.index));
+      else {
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(opt.v).catch(() => {});
+        showToast('已复制短语：' + opt.v);
+      }
+      return;
+    }
+
+    const schemeCard = event.target.closest('[data-library-scheme-group]');
+    if (schemeCard) {
+      const group = schemeCard.dataset.librarySchemeGroup;
+      const key = schemeCard.dataset.librarySchemeKey;
+      setScheme(group, key);
+      closeLibrary();
+      showToast('已套用方案');
+      return;
+    }
+
+    const presetCard = event.target.closest('[data-library-preset]');
+    if (presetCard) { closeLibrary(); applyPreset(presetCard.dataset.libraryPreset); return; }
+
+    if (event.target.closest('#settings-jump')) {
+      $('#mode-toggles').scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
+    }
+  });
+
+  document.addEventListener('change', event => {
+    if (event.target.id === 'preset-select') {
+      if (event.target.value === 'custom') return;
+      applyPreset(event.target.value);
+      return;
+    }
+    if (event.target.matches('[data-scheme-key]')) {
+      setScheme(event.target.dataset.schemeKey, event.target.value);
+      return;
+    }
+    if (event.target.matches('[data-setting]')) {
+      setSetting(event.target.dataset.setting, event.target.checked);
+    }
+  });
+
+  document.addEventListener('input', event => {
+    if (event.target.id === 'slot-search') { drawerSearch = event.target.value; renderSlotDrawer(); }
+    if (event.target.id === 'library-search') {
+      const q = event.target.value.toLowerCase();
+      $$('.library-bank').forEach(section => {
+        let visible = 0;
+        $$('.phrase-chip', section).forEach(chip => {
+          const hit = !q || chip.textContent.toLowerCase().includes(q);
+          chip.hidden = !hit;
+          if (hit) visible++;
+        });
+        section.hidden = visible === 0;
+      });
+    }
+  });
+
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') {
+      if ($('#copy-modal').classList.contains('open')) {
+        $('#copy-modal').classList.remove('open');
+        $('#copy-modal').setAttribute('aria-hidden', 'true');
+      } else if ($('#library-modal').classList.contains('open')) {
+        closeLibrary();
+      } else {
+        closeSlotDrawer();
+      }
+    }
+    if (event.key === 'Enter' && event.target.id === 'manual-slot-input') {
+      event.preventDefault();
+      if (activeSlot) setSlot(activeSlot, event.target.value);
+    }
+  });
+}
+
+/* ============================================================
+   启动
+   ============================================================ */
+
+function init() {
+  const saved = hydrateState(storageGet(STORAGE_KEY, null));
+  state = saved || stateFromPreset(PRESETS[0]);
+  const savedUndo = storageGet(UNDO_KEY, []);
+  undoStack = Array.isArray(savedUndo) ? savedUndo.slice(-MAX_UNDO) : [];
+  bindEvents();
+  renderAll();
+  saveState();
+
+  window.__APP_TEST__ = {
+    getState: () => clone(state),
+    getPresets: () => clone(PRESETS),
+    getTypes: () => clone(TYPES),
+    getRenderedSlots: () => $$('#essay-preview [data-slot]').map(el => el.dataset.slot),
+    getRenderedData: () => {
+      const d = renderEssayData();
+      return { sentenceNumber: d.sentenceNumber, wordCount: d.wordCount, emptyCount: d.emptyCount, usedSlots: Array.from(d.usedSlots) };
+    },
+    setType: applyType,
+    loadPreset: id => applyPreset(id),
+    setScheme,
+    setSetting,
+    openSlot: openSlotDrawer,
+    openLibrary,
+    closeLibrary,
+    renderAll,
+    clear: clearCurrent,
+    undo: restoreUndo,
+    buildEssay,
+    bankCount: () => Object.values(BANKS).reduce((n, l) => n + l.length, 0)
+  };
+}
+
+init();
+
+})();
+
+</script>
+</body>
+</html>
